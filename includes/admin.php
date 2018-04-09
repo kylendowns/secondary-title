@@ -9,6 +9,8 @@
 
    /**
     * Stop script when the file is called directly.
+    *
+    * @since 0.1
     */
    if(!function_exists("add_action")) {
       return false;

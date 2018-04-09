@@ -9,6 +9,10 @@
    width: 80%;
 }
 
+#secondary-title-settings .clear {
+   clear: both;
+}
+
 #secondary-title-settings .form-table th {
    padding-top: 14px;
 }
@@ -29,7 +33,7 @@
    margin-top: 30px !important;
 }
 
-#secondary-title-settings .buttons button:first-of-type {
+#secondary-title-settings .buttons .button {
    margin-right: 10px;
 }
 
@@ -106,7 +110,14 @@
 }
 
 #secondary-title-settings #row-title-format input {
-   width: 85%;
+   width:       100%;
+   padding:     10px;
+   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+   font-size:   13px;
+}
+
+#secondary-title-settings #row-title-format #reset-title-format {
+   float: right;
 }
 
 #secondary-title-settings #row-title-format #title-format-preview-container h4 {
@@ -114,8 +125,9 @@
 }
 
 #secondary-title-settings #row-title-format #title-format-preview-container #title-format-preview {
-   background:    #ededed;
+   background:    #f6f6f6;
    padding:       15px;
+   border:        2px dashed #ccc;
    margin-bottom: 20px;
 }
 
@@ -129,4 +141,16 @@
    font-size:  12px;
    margin-top: 30px;
    opacity:    0.6;
+}
+
+/** ------------------------------ */
+
+#secondary-title-settings {
+   #tools {
+      .loading-icon {
+         width:        24px;
+         position:     relative;
+         margin-right: 10px;
+      }
+   }
 }

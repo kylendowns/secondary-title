@@ -48,10 +48,9 @@
       ?>
       <form method="post" action="" class="wrap metabox-holder" id="secondary-title-settings">
          <input type="hidden" id="text-confirm-reset" value="<?php _e("Are you sure you want to reset all settings?", "secondary-title"); ?>"/>
-
          <h1 class="page-title">
             <i class="fa fa-cogs"></i>
-            <?php echo "Secondary Title &raquo; " . get_admin_page_title(); ?>
+            Secondary Title
          </h1>
          <?php
             if($saved) {
@@ -64,12 +63,12 @@
             elseif($reset) {
                ?>
                <div class="updated">
-                  <p><?php _e("The settings have been successfully reset.", "secondary-title"); ?></p>
+                  <p><?php _e("All settings have been reset to their default values.", "secondary-title"); ?></p>
                </div>
                <?php
             }
          ?>
-         <div class="postboxes" id="postbox-general-settings">
+         <section class="postboxes" id="postbox-general-settings">
             <div class="postbox">
                <div class="content-toggler" title="<?php _e("Collapse/expand section", "secondary-title"); ?>"></div>
                <h3 class="postbox-title hndle">
@@ -108,17 +107,13 @@
                      <tr id="row-title-format">
                         <th>
                            <label for="title-format">
-                              <i class="fa fa-keyboard-o"></i>
+                              <i class="fa fa-keyboard"></i>
                               <?php _e("Title format", "secondary-title"); ?>:
                            </label>
                         </th>
                         <td>
                            <input type="hidden" id="title-format-backup" value="<?php echo stripslashes(esc_attr(get_option("secondary_title_title_format"))); ?>"/>
-                           <input name="title_format" id="title-format" class="regular-text" placeholder="<?php _e("E.g.: %secondary_title%: %title%", "secondary-title"); ?>" value="<?php echo stripslashes(esc_attr(get_option("secondary_title_title_format"))); ?>" autocomplete="off"/>
-                           <a href="#" id="reset-title-format" type="reset" class="button">
-                              <i class="fa fa-undo"></i>
-                              <?php _e("Reset", "secondary-title"); ?>
-                           </a>
+                           <input type="text" name="title_format" id="title-format" class="regular-text" placeholder="<?php _e("E.g.: %secondary_title%: %title%", "secondary-title"); ?>" value="<?php echo stripslashes(esc_attr(get_option("secondary_title_title_format"))); ?>" autocomplete="off"/>
                            <p class="description">
                               <?php echo sprintf(__('Replaces the default title with the given format. Use %s for the main title and %s for the secondary title.', "secondary-title"), '<code class="pointer" title="' . __("Add title to title format input", "secondary-title") . '">%title%</code>', '<code class="pointer" title="' . __("Add secondary title to title format input", "secondary-title") . '">%secondary_title%</code>'); ?>
                            </p>
@@ -149,7 +144,7 @@
                   </table>
                </div>
             </div>
-            <div class="postboxes" id="postbox-display-rules">
+            <section class="postboxes" id="postbox-display-rules">
                <div class="postbox">
                   <div class="content-toggler"></div>
                   <h3 class="postbox-title hndle">
@@ -178,7 +173,7 @@
                         </tr>
                         <tr id="row-post-types">
                            <th>
-                              <i class="fa fa-file-text-o"></i>
+                              <i class="fa fa-file-alt"></i>
                               <?php _e("Post types", "secondary-title"); ?>:
                            </th>
                            <td>
@@ -191,6 +186,10 @@
                                     );
 
                                     foreach($post_types as $post_type) {
+                                       if($post_type === "attachment") {
+                                          continue;
+                                       }
+
                                        $post_type       = get_post_type_object($post_type);
                                        $post_type_posts = new WP_Query(
                                           array(
@@ -201,6 +200,7 @@
                                        $post_type_posts_count = $post_type_posts->found_posts;
                                        $post_types            = secondary_title_get_setting("post_types");
                                        $checked               = "";
+
                                        if(in_array($post_type->name, $post_types, false)) {
                                           $checked = " checked";
                                        }
@@ -225,7 +225,7 @@
                         </tr>
                         <tr id="row-categories">
                            <th>
-                              <i class="fa fa-folder-o"></i>
+                              <i class="fa fa-folder"></i>
                               <?php _e("Categories", "secondary-title"); ?>:
                            </th>
                            <td>
@@ -278,7 +278,7 @@
                         <tr id="row-post-ids">
                            <th>
                               <label for="post-ids">
-                                 <i class="fa fa-sort-numeric-asc"></i>
+                                 <i class="fa fa-sort-numeric-up"></i>
                                  <?php _e("Post IDs", "secondary-title"); ?>:
                               </label>
                            </th>
@@ -292,95 +292,145 @@
                      </table>
                   </div>
                </div>
-               <div class="postbox">
-                  <div class="content-toggler" title="<?php _e("Collapse/expand section", "secondary-title"); ?>"></div>
-                  <h3 class="postbox-title hndle">
-                     <i class="fa fa-cog"></i>
-                     <?php _e("Miscellaneous Settings ", "secondary-title"); ?>
-                  </h3>
-                  <div class="inside open">
-                     <table class="form-table">
-                        <tr>
-                           <th>
-                              <label for="include-in-search-on">
-                                 <i class="fa fa-search"></i>
-                                 <?php _e("Include in search", "secondary-title"); ?>:
-                              </label>
-                           </th>
-                           <td>
-                              <div class="radios">
-                                 <input type="radio" name="include_in_search" id="include-in-search-on" value="on" <?php checked($settings["include_in_search"], "on"); ?>>
+               <section class="postboxes">
+                  <div class="postbox">
+                     <div class="content-toggler" title="<?php _e("Collapse/expand section", "secondary-title"); ?>"></div>
+                     <h3 class="postbox-title hndle">
+                        <i class="fa fa-cog"></i>
+                        <?php _e("Miscellaneous Settings ", "secondary-title"); ?>
+                     </h3>
+                     <div class="inside open">
+                        <table class="form-table">
+                           <tr>
+                              <th>
                                  <label for="include-in-search-on">
-                                    <?php _e("On", "secondary-title"); ?>
+                                    <i class="fa fa-search"></i>
+                                    <?php _e("Include in search", "secondary-title"); ?>:
                                  </label>
+                              </th>
+                              <td>
+                                 <div class="radios">
+                                    <input type="radio" name="include_in_search" id="include-in-search-on" value="on" <?php checked($settings["include_in_search"], "on"); ?>>
+                                    <label for="include-in-search-on">
+                                       <?php _e("On", "secondary-title"); ?>
+                                    </label>
 
-                                 <input type="radio" name="include_in_search" id="include-in-search-off" value="off" <?php checked($settings["include_in_search"], "off"); ?>>
-                                 <label for="include-in-search-off">
-                                    <?php _e("Off", "secondary-title"); ?>
+                                    <input type="radio" name="include_in_search" id="include-in-search-off" value="off" <?php checked($settings["include_in_search"], "off"); ?>>
+                                    <label for="include-in-search-off">
+                                       <?php _e("Off", "secondary-title"); ?>
+                                    </label>
+                                 </div>
+                                 <p class="description">
+                                    <?php _e("Makes the secondary title searchable.", "secondary-title"); ?>
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>
+                                 <label for="input-field-position-top">
+                                    <i class="fa fa-arrow-up"></i>
+                                    <?php _e("Input field", "secondary-title"); ?>:
                                  </label>
-                              </div>
-                              <p class="description">
-                                 <?php _e("Makes the secondary title searchable.", "secondary-title"); ?>
-                              </p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <th>
-                              <label for="input-field-position-top">
-                                 <i class="fa fa-arrow-up"></i>
-                                 <?php _e("Input field", "secondary-title"); ?>:
-                              </label>
-                           </th>
-                           <td>
-                              <div class="radios">
-                                 <input type="radio" name="input_field_position" id="input-field-position-top" value="above" <?php checked($settings["input_field_position"], "above"); ?>/>
-                                 <label for="input-field-position-top"><?php _e("Above standard title", "secondary-title"); ?></label>
+                              </th>
+                              <td>
+                                 <div class="radios">
+                                    <input type="radio" name="input_field_position" id="input-field-position-top" value="above" <?php checked($settings["input_field_position"], "above"); ?>/>
+                                    <label for="input-field-position-top"><?php _e("Above standard title", "secondary-title"); ?></label>
 
-                                 <input type="radio" name="input_field_position" id="input-field-position-bottom" value="below" <?php checked($settings["input_field_position"], "below"); ?>/>
-                                 <label for="input-field-position-bottom"><?php _e("Below standard title", "secondary-title"); ?></label>
-                              </div>
-                              <p class="description">
-                                 <?php _e("Determines the position of the secondary title input field on add/edit post pages within the admin area.", "secondary-title"); ?>
-                              </p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <th>
-                              <label for="column-position-left">
-                                 <i class="fa fa-columns"></i>
-                                 <?php _e("Column position", "secondary-title"); ?>:
-                              </label>
-                           </th>
-                           <td>
-                              <div class="radios">
-                                 <input type="radio" name="column_position" id="column-position-left" value="left" <?php checked($settings["column_position"], "left"); ?>>
+                                    <input type="radio" name="input_field_position" id="input-field-position-bottom" value="below" <?php checked($settings["input_field_position"], "below"); ?>/>
+                                    <label for="input-field-position-bottom"><?php _e("Below standard title", "secondary-title"); ?></label>
+                                 </div>
+                                 <p class="description">
+                                    <?php _e("Determines the position of the secondary title input field on add/edit post pages within the admin area.", "secondary-title"); ?>
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>
                                  <label for="column-position-left">
-                                    <?php _e("Left of primary title", "secondary-title"); ?>
+                                    <i class="fa fa-columns"></i>
+                                    <?php _e("Column position", "secondary-title"); ?>:
                                  </label>
+                              </th>
+                              <td>
+                                 <div class="radios">
+                                    <input type="radio" name="column_position" id="column-position-left" value="left" <?php checked($settings["column_position"], "left"); ?>>
+                                    <label for="column-position-left">
+                                       <?php _e("Left of primary title", "secondary-title"); ?>
+                                    </label>
 
-                                 <input type="radio" name="column_position" id="column-position-right" value="right" <?php checked($settings["column_position"], "right"); ?>>
-                                 <label for="column-position-right">
-                                    <?php _e("Right of primary title", "secondary-title"); ?>
-                                 </label>
+                                    <input type="radio" name="column_position" id="column-position-right" value="right" <?php checked($settings["column_position"], "right"); ?>>
+                                    <label for="column-position-right">
+                                       <?php _e("Right of primary title", "secondary-title"); ?>
+                                    </label>
+                                 </div>
+                                 <p class="description">
+                                    <?php echo sprintf(__("Specifies the position of the secondary title in regard to the primary title on <a href=\"%s\">post overview</a> pages within the admin area.", "secondary-title"), get_admin_url() . "edit.php"); ?>
+                                 </p>
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </section>
+            </section>
+         </section>
+         <!--
+         <section class="postboxes" id="tools">
+            <?php
+            $loading_icon_url = get_admin_url(1, "images/spinner-2x.gif");
+         ?>
+            <div class="postbox">
+               <div class="content-toggler" title="<?php _e("Collapse/expand section", "secondary-title"); ?>"></div>
+               <h3 class="postbox-title hndle">
+                  <i class="fa fa-gavel"></i>
+                  <?php _e("Tools", "secondary-title"); ?>
+               </h3>
+               <div class="inside open">
+                  <table class="form-table">
+                     <tbody>
+                        <tr>
+                           <th>
+                              <?php _e("Find posts", TEXTDOMAIN); ?>:
+                           </th>
+                           <td>
+                              <div class="right">
+                                 <img src="<?php echo $loading_icon_url; ?>" class="loading-icon left" alt="<?php _e("Loading...", TEXTDOMAIN); ?>">
+                                 <button type="button" class="run button-primary">
+                                    Execute
+                                 </button>
                               </div>
-                              <p class="description">
-                                 <?php echo sprintf(__("Specifies the position of the secondary title in regard to the primary title on <a href=\"%s\">post overview</a> pages within the admin area.", "secondary-title"), get_admin_url() . "edit.php"); ?>
-                              </p>
+                              <?php _e("Show all posts", TEXTDOMAIN); ?>
+                              <select name="" id="">
+                                 <option value="with">
+                                    <?php _e("with", TEXTDOMAIN); ?>
+                                 </option>
+                                 <option value="without">
+                                    <?php _e("without", TEXTDOMAIN); ?>
+                                 </option>
+                              </select>
+                              <?php _e("secondary titles.", TEXTDOMAIN); ?>
+                              <div class="clear"></div>
                            </td>
                         </tr>
-                     </table>
-                  </div>
+                     </tbody>
+                  </table>
                </div>
             </div>
-         </div>
+         </section>
+         -->
          <div id="buttons" class="buttons">
-            <button type="submit" class="button-primary">
-               <i class="fa fa-floppy-o"></i>
+            <button type="submit" class="button button-primary" title="<?php _e("Click to save your changes", "secondary-title"); ?>">
+               <i class="fa fa-save"></i>
                <?php _e("Save Changes", "secondary-title"); ?>
             </button>
-            <a href="<?php echo $reset_url; ?>" type="reset" class="button reset-button">
-               <i class="fa fa-trash-o"></i>
+            <a href="<?php echo $reset_url; ?>" type="reset" class="button reset-button" title="<?php _e("Click to reset settings to their default values", "secondary-title"); ?>">
+               <i class="fa fa-redo"></i>
                <?php _e("Reset Settings", "secondary-title"); ?>
+            </a>
+            <a href="https://thaikolja.gitbooks.io/secondary-title/" target="_blank" type="button" class="button" title="<?php _e("Click to view the full documentation of Secondary Title", "secondary-title"); ?>">
+               <i class="fa fa-book"></i>
+               <?php _e("View Full Documentation", "secondary-title"); ?>
             </a>
          </div>
          <?php wp_nonce_field("secondary_title_save_settings", "nonce"); ?>

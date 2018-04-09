@@ -1,5 +1,14 @@
+/**
+ * This file contains the hooks used for Secondary Title.
+ * Hooks are functions that modify WordPress core functions
+ * and thus allow to change their output.
+ *
+ * @package    Secondary Title
+ * @subpackage Global
+ */
+
 jQuery(document).ready(function () {
-   var secondaryTitleInput, inputPosition, titleWrap, titleFormatValue, titleFormat, titleFormatPreview, autoShowOnDescription, autoShowOffDescription, categories, postbox, inside;
+   var secondaryTitleInput, inputPosition, titleWrap, titleFormatValue, titleFormat, titleFormatPreview, autoShowOnDescription, autoShowOffDescription, categories;
 
    function toggleAutoShowDescription() {
       if(jQuery("#auto-show-off").is(":checked")) {
@@ -20,7 +29,7 @@ jQuery(document).ready(function () {
       if(jQuery("#title-format-preview").length < 1) {
          return false;
       }
- 
+
       setTimeout(function () {
          titleFormatPreview = jQuery("#title-format-preview");
          titleFormat        = jQuery("#title-format");

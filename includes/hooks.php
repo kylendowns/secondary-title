@@ -215,16 +215,16 @@
 
       wp_enqueue_style(
          "secondary-title-styles-admin",
-         "{$plugin_folder}styles/css/admin.min.css",
+         "{$plugin_folder}styles/admin.min.css",
          array(),
          SECONDARY_TITLE_VERSION
       );
 
       wp_enqueue_style(
          "secondary-font-awesome",
-         "{$plugin_folder}styles/css/font-awesome.min.css",
+         "{$plugin_folder}styles/font-awesome.min.css",
          array(),
-         "4.7.0"
+         "5.0.9"
       );
    }
 
@@ -360,11 +360,6 @@
       return $pieces;
    }
 
-   /**
-    * Extend WordPress search to include custom fields
-    *
-    * http://adambalee.com
-    */
 
    /**
     * Joins posts and postmeta tables

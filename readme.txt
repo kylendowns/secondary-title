@@ -63,6 +63,12 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 
 == Changelog ==
 
+= 1.9.5 =
+* Optimized display of title format preview on settings page.
+* Added link to online [documentation on GitBooks](https://thaikolja.gitbooks.io/secondary-title/).
+* Fixed bug concerning post columns (thanks to [Colin Ferm](http://www.fortytwosolutions.com/)).
+* Updated Font Awesome to
+
 = 1.9.4 =
 * Hotfix for 1.9.3.
 

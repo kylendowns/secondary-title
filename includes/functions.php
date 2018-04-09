@@ -445,15 +445,12 @@
       global $post;
 
       $category_taxonomy  = get_taxonomy("category");
-      $current_screen     = get_current_screen();
       $allowed_post_ids   = secondary_title_get_setting("post_ids");
       $allowed_post_types = secondary_title_get_setting("post_types");
       $allowed_categories = secondary_title_get_setting("categories");
 
       /** Check if post is not among allowed post types */
       if(isset($post->post_type) && count($allowed_post_types) && !in_array($post->post_type, $allowed_post_types, false)) {
-         echo "NEEEEEE";
-
          return false;
       }
 
