@@ -360,7 +360,6 @@
       return $pieces;
    }
 
-
    /**
     * Joins posts and postmeta tables
     *

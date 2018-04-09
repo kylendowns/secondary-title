@@ -68,6 +68,7 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 * Added link to online [documentation on GitBooks](https://thaikolja.gitbooks.io/secondary-title/).
 * Fixed bug concerning post columns (thanks to [Colin Ferm](http://www.fortytwosolutions.com/)).
 * Updated Font Awesome to 5.0.9.
+* Removed "Media" as post type for available display rules since it is not used anywhere.
 * Minor fixes and cosmetic changes.
 
 = 1.9.4 =

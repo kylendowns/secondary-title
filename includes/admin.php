@@ -34,10 +34,9 @@
 
       $post_id         = get_the_ID();
       $secondary_title = get_secondary_title($post_id);
-
       ?>
       <input type="hidden" id="secondary-title-input-position" value="<?php echo $title_input_position; ?>"/>
-      <input type="text" size="30" id="secondary-title-input" class="secondary-title-input" placeholder="<?php _e("Enter secondary title here", "secondary-title"); ?>" name="secondary_post_title" hidden value="<?php echo htmlentities($secondary_title); ?>"/>
+      <input type="text" size="30" id="secondary-title-input" class="secondary-title-input" placeholder="<?php _e("Enter secondary title here", "secondary-title"); ?>" name="secondary_post_title" hidden value="<?php echo esc_html($secondary_title); ?>"/>
       <?php
 
       return true;
