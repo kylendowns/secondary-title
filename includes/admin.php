@@ -37,7 +37,7 @@
 
       ?>
       <input type="hidden" id="secondary-title-input-position" value="<?php echo $title_input_position; ?>"/>
-      <input type="text" size="30" id="secondary-title-input" class="secondary-title-input" placeholder="<?php _e("Enter secondary title here", "secondary-title"); ?>" name="secondary_post_title" hidden value="<?php echo $secondary_title; ?>"/>
+      <input type="text" size="30" id="secondary-title-input" class="secondary-title-input" placeholder="<?php _e("Enter secondary title here", "secondary-title"); ?>" name="secondary_post_title" hidden value="<?php echo htmlentities($secondary_title); ?>"/>
       <?php
 
       return true;
