@@ -23,8 +23,6 @@
    define("SECONDARY_TITLE_URL", plugin_dir_url(__FILE__));
    define("SECONDARY_TITLE_VERSION", "1.9.4");
 
-   define("TEXTDOMAIN", ""); // TODO: Remove
-
    /** Install default settings (if not set yet) */
    register_activation_hook(__FILE__, "secondary_title_install");
 

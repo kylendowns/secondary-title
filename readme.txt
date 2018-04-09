@@ -67,7 +67,8 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 * Optimized display of title format preview on settings page.
 * Added link to online [documentation on GitBooks](https://thaikolja.gitbooks.io/secondary-title/).
 * Fixed bug concerning post columns (thanks to [Colin Ferm](http://www.fortytwosolutions.com/)).
-* Updated Font Awesome to
+* Updated Font Awesome to 5.0.9.
+* Minor fixes and cosmetic changes.
 
 = 1.9.4 =
 * Hotfix for 1.9.3.
@@ -266,6 +267,9 @@ conflicts.
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 1.9.5 =
+This up update, among others changes, fixes a displaying error on posts/pages overview page.
 
 = 1.9.4 =
 Hotfix for 1.9.3 where obsolete JS code was being executed on the wrong page, destroying the layout.
