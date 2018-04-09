@@ -1,9 +1,9 @@
 <?php
-   /*
+   /**
     * This file contains the main functions that can be used to return,
     * display or modify every information that is related to the plugin.
     *
-    * @package Secondary Title
+    * @package    Secondary Title
     * @subpackage Global
     */
 

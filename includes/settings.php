@@ -1,5 +1,5 @@
 <?php
-   /*
+   /**
     * This file handles everything within the "Settings" > "Secondary Title"
     * settings page within the admin area.
     *
@@ -9,6 +9,8 @@
 
    /**
     * Stop script when the file is called directly.
+    *
+    * @since 0.1
     */
    if(!function_exists("add_action")) {
       return false;
@@ -375,50 +377,6 @@
                </section>
             </section>
          </section>
-         <!--
-         <section class="postboxes" id="tools">
-            <?php
-            $loading_icon_url = get_admin_url(1, "images/spinner-2x.gif");
-         ?>
-            <div class="postbox">
-               <div class="content-toggler" title="<?php _e("Collapse/expand section", "secondary-title"); ?>"></div>
-               <h3 class="postbox-title hndle">
-                  <i class="fa fa-gavel"></i>
-                  <?php _e("Tools", "secondary-title"); ?>
-               </h3>
-               <div class="inside open">
-                  <table class="form-table">
-                     <tbody>
-                        <tr>
-                           <th>
-                              <?php _e("Find posts", TEXTDOMAIN); ?>:
-                           </th>
-                           <td>
-                              <div class="right">
-                                 <img src="<?php echo $loading_icon_url; ?>" class="loading-icon left" alt="<?php _e("Loading...", TEXTDOMAIN); ?>">
-                                 <button type="button" class="run button-primary">
-                                    Execute
-                                 </button>
-                              </div>
-                              <?php _e("Show all posts", TEXTDOMAIN); ?>
-                              <select name="" id="">
-                                 <option value="with">
-                                    <?php _e("with", TEXTDOMAIN); ?>
-                                 </option>
-                                 <option value="without">
-                                    <?php _e("without", TEXTDOMAIN); ?>
-                                 </option>
-                              </select>
-                              <?php _e("secondary titles.", TEXTDOMAIN); ?>
-                              <div class="clear"></div>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            </div>
-         </section>
-         -->
          <div id="buttons" class="buttons">
             <button type="submit" class="button button-primary" title="<?php _e("Click to save your changes", "secondary-title"); ?>">
                <i class="fa fa-save"></i>
