@@ -1,3 +1,16 @@
+/*!
+ * (C) 2018 by Kolja Nolte
+ * kolja.nolte@gmail.com
+ * https://www.koljanolte.com
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * @project Secondary Title
+ */
+
 .secondary-title-input,
 #secondary-title-input {
    margin:  5px 0;
@@ -143,9 +156,13 @@
    opacity:    0.6;
 }
 
-/** ------------------------------ */
+/** -------------------------------- */
 
 #secondary-title-settings {
+   #donation-notice .action-buttons {
+      margin: 20px 0;
+   }
+
    #tools {
       .loading-icon {
          width:        24px;

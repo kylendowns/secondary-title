@@ -1,5 +1,18 @@
 <?php
    /**
+    * (C) 2018 by Kolja Nolte
+    * kolja.nolte@gmail.com
+    * https://www.koljanolte.com
+    *
+    * This program is free software; you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation; either version 2 of the License, or
+    * (at your option) any later version.
+    *
+    * @project Secondary Title
+    */
+
+   /**
     * This file contains the main functions that can be used to return,
     * display or modify every information that is related to the plugin.
     *
@@ -489,4 +502,50 @@
       /** Yup, we're good */
       return true;
    }
+
+   function secondary_title_donation_notice() {
+      ?>
+      <div id="donation-notice" class="notice notice-info is-dismissible">
+         <h1>
+            <?php _e("What you should know...", TEXTDOMAIN); ?>
+         </h1>
+         <p>
+            <?php
+               echo sprintf(
+                  __("%s is and will always be free to use without being annoyed by ads or restricted in such a way that the plugin is only useful once you have bought the premium version.", TEXTDOMAIN),
+                  "<strong>Secondary Title</strong>"
+               );
+            ?>
+         </p>
+         <p>
+            <?php
+               echo sprintf(
+                  __("However, maintaining and updating a plugin to meet the latest technological standards takes time. Time that I do not invest in paid web projects but in this free plugin. If you believe Secondary Title is a useful plugin and has a worth, please consider making a small donation to my PayPal account.", TEXTDOMAIN),
+                  "<strong>Secondary Title</strong>"
+               );
+            ?>
+         </p>
+         <div class="action-buttons">
+            <a href="#">
+               <button class="button button-primary">
+                  blalsadak
+               </button>
+            </a>
+         </div>
+         <button type="button" class="notice-dismiss">
+            <span class="screen-reader-text">Dismiss this notice.</span>
+         </button>
+      </div>
+      <?php
+   }
+
+   function secondary_title_verify_donation_notice() {
+      global $current_screen;
+
+      if($current_screen->base === "settings_page_secondary-title") {
+         add_action("admin_notices", "secondary_title_donation_notice");
+      }
+   }
+
+   add_action("admin_head", "secondary_title_verify_donation_notice");
 

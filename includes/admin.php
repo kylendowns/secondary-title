@@ -1,5 +1,18 @@
 <?php
    /**
+    * (C) 2018 by Kolja Nolte
+    * kolja.nolte@gmail.com
+    * https://www.koljanolte.com
+    *
+    * This program is free software; you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation; either version 2 of the License, or
+    * (at your option) any later version.
+    *
+    * @project Secondary Title
+    */
+
+   /**
     * This file contains the functions used within the admin area.
     * The code for the plugin's settings page is stored separately within /includes/settings.php.
     *
