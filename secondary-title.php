@@ -13,6 +13,19 @@
     */
 
    /**
+    * Plugin Name:   Secondary Title
+    * Plugin URI:    https://www.koljanolte.com/
+    * Description:   Adds a secondary title to posts, pages and custom post types.
+    * Version:       1.9.5
+    * Author:        Kolja Nolte
+    * Author URI:    http://www.koljanolte.com
+    * License:       GPLv2 or later
+    * License URI:   http://www.gnu.org/licenses/gpl-2.0.html
+    * Text Domain:   secondary-title
+    * Domain Path:   /languages
+    */
+
+   /**
     * Stop script when the file is called directly.
     */
    if(!function_exists("add_action")) {
