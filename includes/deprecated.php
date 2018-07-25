@@ -15,7 +15,7 @@
    /**
     * Stop script when the file is called directly.
     *
-    * @since 0.1
+    * @since 0.1.0
     */
    if(!function_exists("add_action")) {
       return false;
@@ -106,7 +106,7 @@
    /**
     * Displays the secondary title link.
     *
-    * @since 0.5
+    * @since 0.5.0
     *
     * @deprecated
     *

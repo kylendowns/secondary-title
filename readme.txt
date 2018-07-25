@@ -63,6 +63,8 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 
 == Changelog ==
 
+= 1.9.6 =
+
 = 1.9.5 =
 * Optimized display of title format preview on settings page.
 * Added link to online [documentation on GitBooks](https://thaikolja.gitbooks.io/secondary-title/).
@@ -154,7 +156,7 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 = 1.5.1 =
 * Hotfix for 1.5.1.
 
-= 1.5 =
+= 1.5.0 =
 * Fixed [notice error](https://wordpress.org/support/topic/notice-error-2) when deleting post (thanks to [master412160](https://wordpress.org/support/profile/master412160) and [wido](https://wordpress.org/support/profile/wido)).
 * Fixed [bug](https://wordpress.org/support/topic/issue-when-filtering-posts-by-category) occurring when filtering posts within the admin area (thanks to [Chillington](https://wordpress.org/support/profile/chillington)).
 * Code cleanup and JS refactoring.
@@ -162,20 +164,20 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 * Updated translations.
 * Compatibility for WordPress 4.2.1.
 
-= 1.4 =
+= 1.4.0 =
 * Added `$use_settings` parameter to `get_secondary_title()` and others which defines whether the secondary title should only be displayed if it matches the plugin's settings. Default `false`.
 * Code rearrangements and improvements.
 * Updated translations.
 
-= 1.3 =
+= 1.3.0 =
 * Fixed [bug](https://wordpress.org/support/topic/missing-secondary-title-column-in-custom-post-type) causing secondary title not to be displayed on certain custom post types overviews (thanks to [saschapi](https://wordpress.org/support/profile/saschapi)).
 * Updated translations.
 
-= 1.2 =
+= 1.2.0 =
 * Small bug fixes and corrections.
 * Updated translations.
 
-= 1.1 =
+= 1.1.0 =
 * Removed `<?php secondary_title_plugins_settings_link(); ?>` due to compatibility problems.
 * Added filter hook `secondary_title_show_overview_column` to disable the secondary title column on post overviews without using the screen values (thanks to [Alkorr](https://wordpress.org/support/topic/hide-secondary-title-description-column)).
 * Added Dutch (thanks to [SilverXp](https://www.transifex.com/accounts/profile/SilverXp/)), Turkish (thanks to [mapazarbasi](https://www.transifex.com/accounts/profile/mapazarbasi/)) and other translation.
@@ -183,7 +185,7 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 * Fixed bug that prevented the "Author" column on post overview page to be shown.
 * Further bug fixes.
 
-= 1.0 =
+= 1.0.0 =
 * Allows HTML tags within individual secondary titles (thanks to [brit77](http://wordpress.org/support/topic/adding-html-tags-to-secondary-title)).
 * Updated documentation.
 
@@ -195,7 +197,7 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 = 0.9.1 =
 * Bug fixes for 0.9.
 
-= 0.9 =
+= 0.9.0 =
 * Removed *Report bug* e-mail form due to compatibility issues.
 * Fixed [bug](http://wordpress.org/support/topic/bulk-edit-deletes-secondary-titles) that deleted the secondary
 title on selected posts when using *Bulk edit* (thanks to [JacobSchween](http://wordpress.org/support/profile/jacobschween)).
@@ -203,7 +205,7 @@ title on selected posts when using *Bulk edit* (thanks to [JacobSchween](http://
 * Updated translations.
 * Several small changes that aren't important enough to be mentioned here.
 
-= 0.8 =
+= 0.8.0 =
 * Some new minor functions and changes on the settings page.
 * Allowed to use `%title%` and `%secondary_title%` variable on settings page in *Title format* more than once.
 * Added option to [use secondary title in permalinks](http://wordpress.org/support/topic/feature-request-add-secondary-title-to-permalinks?replies=3).
@@ -216,7 +218,7 @@ title on selected posts when using *Bulk edit* (thanks to [JacobSchween](http://
 possible
 conflicts.
 
-= 0.7 =
+= 0.7.0 =
 * Restructured and split up plugin code into different files for better handling.
 * Added *Secondary title* column to posts/pages overview.
 * Added secondary title input field to quick edit box on posts/pages overview.
@@ -227,7 +229,7 @@ conflicts.
 * Updated translations.
 * Bug fixes.
 
-= 0.6 =
+= 0.6.0 =
 * Added compatibility with Word Filter Plus plugin.
 * Added *Only show in main post* setting.
 * Fixed minor jQuery bug on admin interface.
@@ -238,7 +240,7 @@ conflicts.
 * Fixed jQuery bug in the admin posts/
 * Added `<?php has_secondary_title(); ?>` function. See [the official documentation](http://www.koljanolte.com/koljanolte.com/wordpress/plugins/secondary-title/#Parameters) for more information.
 
-= 0.5 =
+= 0.5.0 =
 * Fixed bug where the secondary title was not shown if the standard title contains "..." (thanks to Vangelis).
 * Added *Select all* and *Unselect all* script for checkbox lists on settings page.
 * Added secondary title display in admin posts/pages list.
@@ -246,25 +248,25 @@ conflicts.
   to quickly create the secondary title as a link to its post. See [the official documentation](http://www.koljanolte.com/koljanolte.com/wordpress/plugins/secondary-title/#Parameters) for more information.
 * Updated documentation/readme.txt.
 
-= 0.4 =
+= 0.4.0 =
 * Fixed bug that showed secondary title input within the post/page overview.
 * Added Italian translation (thanks to [giuseppep](https://www.transifex.com/accounts/profile/giuseppep/)).
 * Added Polish translation (thanks to [pawel10](https://www.transifex.com/accounts/profile/pawel10/)).
 * Updated existing translations.
 
-= 0.3 =
+= 0.3.0 =
 * Added HTML support in title format (thanks to C0BALT).
 * Added option to set the position of the secondary title input field within the admin interface (thanks to Vangelis).
 * Added translation to Thai.
 * Updated translation files.
 
-= 0.2 =
+= 0.2.0 =
 * Installs default values on plugin activation.
 * Added screenshots.
 * Added $prefix and $suffix parameter for `<?php get_secondary_title(); ?>` and `<?php the_secondary_title(); ?>`.
 * Updated FAQ.
 
-= 0.1 =
+= 0.1.0 =
 * Initial Release.
 
 == Upgrade Notice ==
@@ -326,22 +328,22 @@ Small bug fix for JavaScript in Firefox.
 = 1.5.1 =
 Hotfix for 1.5.1.
 
-= 1.5 =
+= 1.5.0 =
 Two bugs fixed and some code cleanup.
 
-= 1.4 =
+= 1.4.0 =
 Code rearrangements and added `$use_settings` parameter to `get_secondary_title()` and related functions that defines whether or not the plugin settings should be validated.
 
-= 1.3 =
+= 1.3.0 =
 Fixed posts overview bug, added/updated translations.
 
-= 1.2 =
+= 1.2.0 =
 Bug fixes, translation updates.
 
-= 1.1 =
+= 1.1.0 =
 Fixed bug on posts overview page, new/updated translations.
 
-= 1.0 =
+= 1.0.0 =
 HTML allowed in secondary title and small fixes.
 
 = 0.9.2 =
@@ -350,32 +352,32 @@ Additional hotfix for 0.9.
 = 0.9.1 =
 Hotfix for 0.9.
 
-= 0.9 =
+= 0.9.0 =
 Bug fixes.
 
-= 0.8 =
+= 0.8.0 =
 Permalinks support, bug fixes, translation updates.
 
-= 0.7 =
+= 0.7.0 =
 Major changes; restructured plugin files, added "Secondary title" column to posts/page overview and more.
 
-= 0.6 =
+= 0.6.0 =
 Bug fixes, setting added, compatibility with Word Filter Plus plugin.
 
 = 0.5.1 =
 Hotfix for 0.5.
 
-= 0.5 =
+= 0.5.0 =
 Bug fixes and some more features.
 
-= 0.4 =
+= 0.4.0 =
 Bug fix and translation update.
 
-= 0.3 =
+= 0.3.0 =
 HTML support and new features.
 
-= 0.2 =
+= 0.2.0 =
 Major changes, screenshots, FAQ, parameters.
 
-= 0.1 =
+= 0.1.0 =
 This is the first release of Secondary Title.

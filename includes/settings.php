@@ -23,7 +23,7 @@
    /**
     * Stop script when the file is called directly.
     *
-    * @since 0.1
+    * @since 0.1.0
     */
    if(!function_exists("add_action")) {
       return false;
@@ -32,7 +32,7 @@
    /**
     * Build the option page.
     *
-    * @since 0.1
+    * @since 0.1.0
     */
    function secondary_title_settings_page() {
       /** Restrict unauthorized access */

@@ -11,6 +11,10 @@
  * @project Secondary Title
  */
 
+/**
+ * Styles for Secondary Title's settings page
+ */
+
 .secondary-title-input,
 #secondary-title-input {
    margin:  5px 0;
@@ -156,8 +160,6 @@
    opacity:    0.6;
 }
 
-/** -------------------------------- */
-
 #secondary-title-settings {
    #donation-notice .action-buttons {
       margin: 20px 0;
@@ -167,6 +169,18 @@
       .loading-icon {
          width:        24px;
          position:     relative;
+         margin-right: 10px;
+      }
+   }
+}
+
+/**
+ * Styles for general admin area elements
+ */
+
+#donation-notice {
+   .action-buttons {
+      .link-button {
          margin-right: 10px;
       }
    }

@@ -23,7 +23,7 @@
    /**
     * Stop script when the file is called directly.
     *
-    * @since 0.1
+    * @since 0.1.0
     */
    if(!function_exists("add_action")) {
       return false;
@@ -33,7 +33,7 @@
     * Build the invisible secondary title input on edit pages
     * to let jQuery displaying it (see admin.js).
     *
-    * @since 0.1
+    * @since 0.1.0
     *
     * @return bool
     */
@@ -78,7 +78,7 @@
       $column_title = __("Secondary Title", "secondary-title");
       $column_title = array($column_id => $column_title);
 
-      /** Seti array keys with default columns */
+      /** Set array keys with default columns */
       $keys = array_keys($columns);
 
       /** Search for the first key and modifying the position by changing the offset */
@@ -124,6 +124,11 @@
       if(!$activated_post_types) {
          $activated_post_types = get_post_types();
       }
+
+      $activated_post_types = apply_filters(
+         "secondary_title_columns_in_post_types",
+         $activated_post_types
+      );
 
       foreach($activated_post_types as $post_type) {
          add_action(
