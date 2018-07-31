@@ -92,7 +92,8 @@
          "secondary_title_column_position"        => "right",
          "secondary_title_feed_auto_show"         => "off",
          "secondary_title_feed_title_format"      => "%title%",
-         "secondary_title_include_in_search"      => "on"
+         "secondary_title_include_in_search"      => "on",
+         "secondary_title_show_donation_notice"   => "on"
       );
 
       $default_settings = apply_filters("secondary_title_get_default_settings", $default_settings);
@@ -502,41 +503,3 @@
       /** Yup, we're good */
       return true;
    }
-
-   /**
-    * Displays a dismissable donation notice in the admin area.
-    *
-    * @since 1.9.6
-    */
-   function secondary_title_donation_notice() {
-      ?>
-      <div id="donation-notice" class="notice notice-info is-dismissible">
-         <h1>
-            <?php _e("Feeling generous?", TEXTDOMAIN); ?>
-         </h1>
-         <p>
-            <?php
-               _e("Ah, I look at that, you are using my plugin <em>Secondary Title</em>. Good choice ;-) If you want to make sure that the plugin continues to be updated to guarantee compatibility with your plugins or themes, you can do something.", TEXTDOMAIN);
-            ?>
-         </p>
-         <div class="action-buttons">
-            <a href="https://www.paypal.me/thaikolja/10/" target="_blank" class="button button-primary link-button">
-               <i class="fab fa-paypal"></i>
-               <?php _e("Donate with PayPal", TEXTDOMAIN); ?>
-            </a>
-            <a href="?secondary-title-notice=off" class="button button-secondary dismiss-button">
-               <i class="fa fa-times"></i>
-               <?php _e("Stop displaying this annoying notice", TEXTDOMAIN); ?>
-            </a>
-         </div>
-         <button type="button" class="notice-dismiss">
-            <span class="screen-reader-text">Dismiss this notice.</span>
-         </button>
-         <br>
-      </div>
-      <?php
-   }
-
-   add_action("admin_notices", "secondary_title_donation_notice");
-
-

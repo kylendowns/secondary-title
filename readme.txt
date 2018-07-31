@@ -2,8 +2,8 @@
 Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
 Tags: title,         alternative title, secondary title, second title, additional title, post title, title
-Tested up to:        4.9.5
-Stable tag:          1.9.3
+Tested up to:        4.9.7
+Stable tag:          1.9.6
 Requires at least:   4.0
 Requires PHP:        5.2.4
 License:             GPLv2 or later

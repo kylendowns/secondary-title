@@ -43,10 +43,8 @@
             return false;
          }
       }
-      else {
-         if(!current_user_can("edit_post", $post_id)) {
-            return false;
-         }
+      else if(!current_user_can("edit_post", $post_id)) {
+         return false;
       }
 
       return update_post_meta($post_id, "_secondary_title", stripslashes(esc_attr($_POST["secondary_post_title"])));
@@ -139,7 +137,7 @@
       $standard_title = $title;
 
       /** Don't do "auto show" when on admin area or if the post is not a valid post */
-      if(!isset($post->ID) || is_admin()) {
+      if($post->ID === null || is_admin()) {
          return $standard_title;
       }
 
@@ -460,3 +458,53 @@
    }
 
    add_action("init", "secondary_title_add_shortcode_function_init");
+
+   /**
+    * Displays a dismissable donation notice in the admin area.
+    *
+    * @since 1.9.6
+    */
+   function secondary_title_donation_notice() {
+      if(secondary_title_get_setting("show_donation_notice") !== "on") {
+         return;
+      }
+      ?>
+      <div id="donation-notice" class="notice notice-info is-dismissible">
+         <h1>
+            <?php _e("Feeling generous?", TEXTDOMAIN); ?>
+         </h1>
+         <p>
+            <?php
+               _e("Ah, I look at that, you are using my plugin <em>Secondary Title</em>. Good choice ;-) If you want to make sure that the plugin continues to be updated to guarantee compatibility with your plugins or themes, you can do something.", TEXTDOMAIN);
+            ?>
+         </p>
+         <div class="action-buttons">
+            <a href="https://www.paypal.me/thaikolja/10/" target="_blank" class="button button-primary link-button" style="margin-right:10px;">
+               <i class="fab fa-paypal"></i>
+               <?php _e("Donate with PayPal", TEXTDOMAIN); ?>
+            </a>
+            <a href="?secondary_title_notice=off" class="button button-secondary dismiss-button">
+               <i class="fa fa-times"></i>
+               <?php _e("Stop displaying this annoying notice", TEXTDOMAIN); ?>
+            </a>
+         </div>
+         <button type="button" class="notice-dismiss">
+            <span class="screen-reader-text">Dismiss this notice.</span>
+         </button>
+         <br>
+      </div>
+      <?php
+   }
+
+   add_action("admin_notices", "secondary_title_donation_notice");
+
+   function secondary_title_deactivate_donation_notice() {
+      if(isset($_GET["secondary_title_notice"]) && $_GET["secondary_title_notice"] === "off") {
+         update_option(
+            "secondary_title_show_donation_notice",
+            "off"
+         );
+      }
+   }
+
+   add_action("admin_head", "secondary_title_deactivate_donation_notice");

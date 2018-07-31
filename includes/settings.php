@@ -114,7 +114,7 @@
 
                            <p id="auto-show-off-description" class="description">
                               <?php
-                                 echo sprintf(__('To manually insert the secondary title in your theme, use %s. See the <a href="%s" title="See official documentation" target="_blank" >official documentation</a> for additional parameters.', "secondary-title"), "<code>&lt;?php echo get_secondary_title(); ?&gt;</code>", "https://www.koljanolte.com/wordpress/plugins/secondary-title/documentation/");
+                                 echo sprintf(__('To manually insert the secondary title in your theme, use %s. See the <a href="%s" title="See official documentation" target="_blank" >official documentation</a> for additional parameters.', "secondary-title"), "<code>&lt;?php echo get_secondary_title(); ?&gt;</code>", "https://thaikolja.gitbooks.io/secondary-title/functions.html#get-secondary-title");
                               ?>
                            </p>
                         </td>
@@ -130,7 +130,12 @@
                            <input type="hidden" id="title-format-backup" value="<?php echo stripslashes(esc_attr(get_option("secondary_title_title_format"))); ?>"/>
                            <input type="text" name="title_format" id="title-format" class="regular-text" placeholder="<?php _e("E.g.: %secondary_title%: %title%", "secondary-title"); ?>" value="<?php echo stripslashes(esc_attr(get_option("secondary_title_title_format"))); ?>" autocomplete="off"/>
                            <p class="description">
-                              <?php echo sprintf(__('Replaces the default title with the given format. Use %s for the main title and %s for the secondary title.', "secondary-title"), '<code class="pointer" title="' . __("Add title to title format input", "secondary-title") . '">%title%</code>', '<code class="pointer" title="' . __("Add secondary title to title format input", "secondary-title") . '">%secondary_title%</code>'); ?>
+                              <?php
+                                 echo sprintf(
+                                    __('Replaces the default title with the given format. Use %s for the main title and %s for the secondary title.', "secondary-title"),
+                                    '<code class="pointer" title="' . __("Add title to title format input", "secondary-title") . '">%title%</code>',
+                                    '<code class="pointer" title="' . __("Add secondary title to title format input", "secondary-title") . '">%secondary_title%</code>'
+                                 ); ?>
                            </p>
                            <div id="title-format-preview-container">
                               <?php
@@ -298,7 +303,7 @@
                               </label>
                            </th>
                            <td>
-                              <input name="post_ids" id="post-ids" class="regular-text" placeholder="<?php _e("E.g. 13, 71, 33", "secondary-title"); ?>" value="<?php echo implode(", ", secondary_title_get_setting("post_ids")); ?>"/>
+                              <input name="post_ids" id="post-ids" class="widefat" placeholder="<?php _e("E.g. 13, 71, 33", "secondary-title"); ?>" value="<?php echo implode(", ", secondary_title_get_setting("post_ids")); ?>"/>
                               <p class="description">
                                  <?php _e("Only uses the secondary title if post is among the entered post IDs. Use commas to separate multiple IDs.", "secondary-title"); ?>
                               </p>
