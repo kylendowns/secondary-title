@@ -2,7 +2,7 @@
 Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
 Tags: title,         alternative title, secondary title, second title, additional title, post title, title
-Tested up to:        4.9.7
+Tested up to:        4.9.8
 Stable tag:          1.9.6
 Requires at least:   4.0
 Requires PHP:        5.2.4
@@ -64,6 +64,16 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 == Changelog ==
 
 = 1.9.6 =
+* Added new filter hook `secondary_title_columns_in_post_types`. Read more about it in the [documentation](https://thaikolja.gitbooks.io/secondary-title/filters.html).
+* Added dismissable donation notice.
+* Compatibility with WordPress 4.9.8.
+* Fixed conflicts with standard meta queries when using "Include in search" (thanks to [@filmstarr](https://wordpress.org/support/users/filmstarr/)).
+* Added tedxtdomain constant.
+* Updated Plugin URI in readme.txt.
+* Removed commented (unused) code.
+* Updated URLs on the plugin's settings page.
+* Added copyright to file headers.
+* Replaced `screenshot-3.png` with an updated one.
 
 = 1.9.5 =
 * Optimized display of title format preview on settings page.
@@ -271,8 +281,11 @@ conflicts.
 
 == Upgrade Notice ==
 
+= 1.9.6 =
+Version 1.9.6 contains a series of code and performance improvements and some new functions.
+
 = 1.9.5 =
-This up update, among others changes, fixes a displaying error on posts/pages overview page.
+This update, among others changes, fixes a displaying error on posts/pages overview page.
 
 = 1.9.4 =
 Hotfix for 1.9.3 where obsolete JS code was being executed on the wrong page, destroying the layout.

@@ -35,7 +35,7 @@
    define("SECONDARY_TITLE_PATH", plugin_dir_path(__FILE__));
    define("SECONDARY_TITLE_URL", plugin_dir_url(__FILE__));
    define("SECONDARY_TITLE_VERSION", "1.9.6");
-   define("TEXTDOMAIN", "secondary-title");
+   define("SECONDARY_TITLE_TEXTDOMAIN", "secondary-title");
 
    /** Install default settings (if not set yet) */
    register_activation_hook(__FILE__, "secondary_title_install");

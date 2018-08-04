@@ -137,7 +137,7 @@
       $standard_title = $title;
 
       /** Don't do "auto show" when on admin area or if the post is not a valid post */
-      if($post->ID === null || is_admin()) {
+      if(is_admin() || !isset($post->ID)) {
          return $standard_title;
       }
 
@@ -366,7 +366,7 @@
       global $wpdb;
 
       if(is_search()) {
-         $join .= " LEFT JOIN " . $wpdb->postmeta . " ON " . $wpdb->posts . ".ID = " . $wpdb->postmeta . ".post_id ";
+         $join .= " LEFT JOIN " . $wpdb->postmeta . " AS stmt1 ON " . $wpdb->posts . ".ID = stmt1.post_id ";
       }
 
       return $join;
@@ -387,7 +387,7 @@
       if(is_search()) {
          $where = preg_replace(
             "/\(\s*" . $wpdb->posts . ".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
-            "(" . $wpdb->posts . ".post_title LIKE $1) OR (" . $wpdb->postmeta . ".meta_value LIKE $1)",
+            "(" . $wpdb->posts . ".post_title LIKE $1) OR (stmt1.meta_value LIKE $1)",
             $where
          );
       }
@@ -471,21 +471,21 @@
       ?>
       <div id="donation-notice" class="notice notice-info is-dismissible">
          <h1>
-            <?php _e("Feeling generous?", TEXTDOMAIN); ?>
+            <?php _e("Feeling generous?", "secondary-title"); ?>
          </h1>
          <p>
             <?php
-               _e("Ah, I look at that, you are using my plugin <em>Secondary Title</em>. Good choice ;-) If you want to make sure that the plugin continues to be updated to guarantee compatibility with your plugins or themes, you can do something.", TEXTDOMAIN);
+               _e("Ah, look at that, you are using my plugin <em>Secondary Title</em>. Good choice 😉 If you want to make sure that the plugin continues to be updated to guarantee compatibility with your plugins or themes, you can help by making a small donation. This will benefit not only you but the whole WordPress community.", "secondary-title");
             ?>
          </p>
          <div class="action-buttons">
             <a href="https://www.paypal.me/thaikolja/10/" target="_blank" class="button button-primary link-button" style="margin-right:10px;">
                <i class="fab fa-paypal"></i>
-               <?php _e("Donate with PayPal", TEXTDOMAIN); ?>
+               <?php _e("Keep Secondary Title alive by Donating via PayPal", "secondary-title"); ?>
             </a>
             <a href="?secondary_title_notice=off" class="button button-secondary dismiss-button">
                <i class="fa fa-times"></i>
-               <?php _e("Stop displaying this annoying notice", TEXTDOMAIN); ?>
+               <?php _e("Stop displaying this annoying notice", "secondary-title"); ?>
             </a>
          </div>
          <button type="button" class="notice-dismiss">
