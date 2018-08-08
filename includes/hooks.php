@@ -199,7 +199,7 @@
 
       wp_enqueue_script(
          "secondary-title-scripts-admin",
-         "{$plugin_folder}scripts/admin.min.js",
+         "{$plugin_folder}scripts/js/admin.min.js",
          array("jquery"),
          SECONDARY_TITLE_VERSION
       );
@@ -208,16 +208,16 @@
 
       wp_enqueue_style(
          "secondary-title-styles-admin",
-         "{$plugin_folder}styles/admin.min.css",
+         "{$plugin_folder}styles/css/admin.min.css",
          array(),
          SECONDARY_TITLE_VERSION
       );
 
       wp_enqueue_style(
          "secondary-font-awesome",
-         "{$plugin_folder}styles/font-awesome.min.css",
-         array(),
-         "5.0.9"
+         "{$plugin_folder}styles/css/font-awesome.min.css",
+         array("secondary-title-styles-admin"),
+         "5.2.0"
       );
    }
 
@@ -475,7 +475,18 @@
          </h1>
          <p>
             <?php
-               _e("Ah, look at that, you are using my plugin <em>Secondary Title</em>. Good choice 😉 If you want to make sure that the plugin continues to be updated to guarantee compatibility with your plugins or themes, you can help by making a small donation. This will benefit not only you but the whole WordPress community.", "secondary-title");
+               echo sprintf(
+                  __(
+                     "<p>" . "Ah, look at that, you are using my plugin %s. Excellent choice 😉" . "</p>",
+                     TEXTDOMAIN
+                  ),
+                  "<strong>Secondary Title</strong> (version " . SECONDARY_TITLE_VERSION . ")"
+               );
+
+               _e(
+                  "<p>" . "If you want to make sure that the plugin continues to be updated to guarantee compatibility with future versions your plugins or themes, you can help by making a small donation. This will benefit not only yourself but the whole WordPress community!" . "</p>",
+                  TEXTDOMAIN
+               );
             ?>
          </p>
          <div class="action-buttons">

@@ -329,6 +329,7 @@
                                  </label>
                               </th>
                               <td>
+                                 <?php secondary_title_print_html_info_circle("include-in-search"); ?>
                                  <div class="radios">
                                     <input type="radio" name="include_in_search" id="include-in-search-on" value="on" <?php checked($settings["include_in_search"], "on"); ?>>
                                     <label for="include-in-search-on">
@@ -353,6 +354,7 @@
                                  </label>
                               </th>
                               <td>
+                                 <?php secondary_title_print_html_info_circle("input-fields"); ?>
                                  <div class="radios">
                                     <input type="radio" name="input_field_position" id="input-field-position-top" value="above" <?php checked($settings["input_field_position"], "above"); ?>/>
                                     <label for="input-field-position-top"><?php _e("Above standard title", "secondary-title"); ?></label>
@@ -373,6 +375,7 @@
                                  </label>
                               </th>
                               <td>
+                                 <?php secondary_title_print_html_info_circle("column-position"); ?>
                                  <div class="radios">
                                     <input type="radio" name="column_position" id="column-position-left" value="left" <?php checked($settings["column_position"], "left"); ?>>
                                     <label for="column-position-left">

@@ -63,6 +63,14 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 
 == Changelog ==
 
+= 1.9.7 =
+* Added info icons next to every setting which links to the official documentation where those settings are being explained in detail.
+* Updated Font Awesome to 5.2.0.
+* Minor restructure of resources directories.
+* Declared unused `secondary_title_get_default_setting()` as deprecated function.
+* Donation notification dismissed by users will start to show up again if the  plugin is re-activated (please don't kill me!).
+* Minor adjustments to the donation notification.
+
 = 1.9.6 =
 * Added new filter hook `secondary_title_columns_in_post_types`. Read more about it in the [documentation](https://thaikolja.gitbooks.io/secondary-title/filters.html).
 * Added dismissable donation notice.

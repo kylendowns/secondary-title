@@ -34,11 +34,16 @@
 
    define("SECONDARY_TITLE_PATH", plugin_dir_path(__FILE__));
    define("SECONDARY_TITLE_URL", plugin_dir_url(__FILE__));
-   define("SECONDARY_TITLE_VERSION", "1.9.6");
+   define("SECONDARY_TITLE_VERSION", "1.9.7");
    define("SECONDARY_TITLE_TEXTDOMAIN", "secondary-title");
+
+   define("TEXTDOMAIN", "TEXTDOMAIN"); // TODO: Remove
 
    /** Install default settings (if not set yet) */
    register_activation_hook(__FILE__, "secondary_title_install");
+
+   /** Handles the donation notification display settings */
+   register_deactivation_hook(__FILE__, "secondary_title_reset_donation_notice");
 
    function secondary_title_load_translations() {
       load_plugin_textdomain(

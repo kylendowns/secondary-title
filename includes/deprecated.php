@@ -169,12 +169,12 @@
    /**
     * Displays an error or success message on top of the screen.
     *
+    * @since 1.6.0
+    *
     * @deprecated
     *
     * @param        $message
     * @param string $type
-    *
-    * @since 1.6.0
     */
    function secondary_title_the_message($message, $type = "success") {
       _deprecated_function(
@@ -183,4 +183,25 @@
       );
 
       echo secondary_title_get_message($message, $type);
+   }
+
+   /**
+    * Returns a single default setting and its value.
+    *
+    * @since 0.1.0
+    *
+    * @deprecated
+    *
+    * @param string $setting
+    *
+    * @return mixed
+    */
+   function secondary_title_get_default_setting($setting) {
+      _deprecated_function(
+         "secondary_title_get_default_setting",
+         "1.9.7",
+         "secondary_title_get_default_settings()[\"secondary_title_\$setting\"]"
+      );
+
+      return secondary_title_get_default_settings()[$setting];
    }
