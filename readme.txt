@@ -76,7 +76,7 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 * Added dismissable donation notice.
 * Compatibility with WordPress 4.9.8.
 * Fixed conflicts with standard meta queries when using "Include in search" (thanks to [@filmstarr](https://wordpress.org/support/users/filmstarr/)).
-* Added tedxtdomain constant.
+* Added textdomain constant.
 * Updated Plugin URI in readme.txt.
 * Removed commented (unused) code.
 * Updated URLs on the plugin's settings page.
