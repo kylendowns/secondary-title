@@ -503,7 +503,7 @@
    function secondary_title_print_html_info_circle($anchor) {
       $info_url = "https://thaikolja.gitbooks.io/secondary-title/quick-start/settings.html";
       ?>
-      <a href="<?php echo $info_url . "#" . $anchor; ?>" target="_blank" title="<?php _e("Click here to learn more about this setting", TEXTDOMAIN); ?>" class="info-circle right">
+      <a href="<?php echo $info_url . "#" . $anchor; ?>" target="_blank" title="<?php _e("Click here to learn more about this setting", "secondary-title"); ?>" class="info-circle right">
          <i class="fa fa-info-circle"></i>
       </a>
       <?php

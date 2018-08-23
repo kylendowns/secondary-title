@@ -37,8 +37,6 @@
    define("SECONDARY_TITLE_VERSION", "1.9.7");
    define("SECONDARY_TITLE_TEXTDOMAIN", "secondary-title");
 
-   define("TEXTDOMAIN", "TEXTDOMAIN"); // TODO: Remove
-
    /** Install default settings (if not set yet) */
    register_activation_hook(__FILE__, "secondary_title_install");
 

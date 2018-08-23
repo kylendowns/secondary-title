@@ -153,7 +153,7 @@
       $standard_title = $title;
 
       /** Don't do "auto show" when on admin area or if the post is not a valid post */
-      if(is_admin() || !isset($post->ID)) {
+      if($post->ID === null || is_admin()) {
          return $standard_title;
       }
 
@@ -203,15 +203,12 @@
       /** Find out what page we're on */
       $current_screen = get_current_screen();
       $page_base      = $current_screen->base;
+      $plugin_folder  = plugin_dir_url(dirname(__FILE__));
 
       /** Don't load anything if we're not on the right page */
       if($page_base !== "edit" && $page_base !== "post" && $page_base !== "settings_page_secondary-title") {
          return;
       }
-
-      $file = dirname(__FILE__);
-
-      $plugin_folder = plugin_dir_url(dirname(__FILE__));
 
       /** Scripts */
 
@@ -496,14 +493,14 @@
                echo sprintf(
                   __(
                      "<p>" . "Ah, look at that, you are using my plugin %s. Excellent choice 😉" . "</p>",
-                     TEXTDOMAIN
+                     "secondary-title"
                   ),
                   "<strong>Secondary Title</strong> (version " . SECONDARY_TITLE_VERSION . ")"
                );
 
                _e(
                   "<p>" . "If you want to make sure that the plugin continues to be updated to guarantee compatibility with future versions your plugins or themes, you can help by making a small donation. This will benefit not only yourself but the whole WordPress community!" . "</p>",
-                  TEXTDOMAIN
+                  "secondary-title"
                );
             ?>
          </p>
