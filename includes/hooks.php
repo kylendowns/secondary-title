@@ -153,7 +153,7 @@
       $standard_title = $title;
 
       /** Don't do "auto show" when on admin area or if the post is not a valid post */
-      if($post->ID === null || is_admin()) {
+      if(!isset($post->ID) || is_admin()) {
          return $standard_title;
       }
 
