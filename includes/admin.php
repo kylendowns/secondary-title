@@ -1,7 +1,7 @@
 <?php
    /**
     * (C) 2018 by Kolja Nolte
-    * kolja.nolte@gmail.com
+    * kolja@koljanolte.com
     * https://www.koljanolte.com
     *
     * This program is free software; you can redistribute it and/or modify

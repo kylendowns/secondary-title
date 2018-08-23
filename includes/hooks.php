@@ -1,5 +1,18 @@
 <?php
    /**
+    * (C) 2018 by Kolja Nolte
+    * kolja@koljanolte.com
+    * https://www.koljanolte.com
+    *
+    * This program is free software; you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation; either version 2 of the License, or
+    * (at your option) any later version.
+    *
+    * @project Secondary Title
+    */
+
+   /**
     * This file contains the hooks used for Secondary Title.
     * Hooks are functions that modify WordPress core functions
     * and thus allow to change their output.
@@ -16,6 +29,9 @@
    if(!function_exists("add_action")) {
       return false;
    }
+
+   /** Loads translation files (function defined in secondary-title.php */
+   add_action("plugins_loaded", "secondary_title_load_translations");
 
    /**
     * Updates the secondary title when "Edit post" screen
@@ -192,6 +208,8 @@
       if($page_base !== "edit" && $page_base !== "post" && $page_base !== "settings_page_secondary-title") {
          return;
       }
+
+      $file = dirname(__FILE__);
 
       $plugin_folder = plugin_dir_url(dirname(__FILE__));
 
@@ -519,3 +537,54 @@
    }
 
    add_action("admin_head", "secondary_title_deactivate_donation_notice");
+
+   /**
+    * Add plugin action links.
+    *
+    * Add a link to the settings page on the plugins.php page.
+    *
+    * @since 1.0.0
+    *
+    * @param  array $links List of existing plugin action links.
+    *
+    * @return array         List of modified plugin action links.
+    */
+   function my_plugin_action_links($links) {
+      $links = array_merge(
+         array(
+            '<a href="' . esc_url(admin_url('/options-general.php')) . '">' . __('Settings', 'textdomain') . '</a>'
+         ),
+         $links
+      );
+
+      return $links;
+   }
+
+   /**
+    * Adds a link to the plugin's settings page on WP's
+    * "Plugins" section in the admin area.
+    *
+    * @param array $links The already existing links ("Disable", "Activate", ...)
+    *
+    * @since 1.9.7
+    *
+    * @return array
+    */
+   function secondary_title_add_settings_link(array $links) {
+      $settings_link      = "";
+      $settings_page_link = admin_url("options-general.php?page=secondary-title");
+      $link_title         = __("Go to Secondary Title's options page", "secondary-title");
+
+      $settings_link .= "<a href=\"$settings_page_link\" title=\"$link_title\">";
+      $settings_link .= __("Settings", "secondary-title");
+      $settings_link .= "</a>";
+
+      $links = array_merge(
+         $links,
+         array(
+            $settings_link
+         )
+      );
+
+      return (array)$links;
+   }

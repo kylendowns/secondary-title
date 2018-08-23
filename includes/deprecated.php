@@ -1,7 +1,7 @@
 <?php
    /**
     * (C) 2018 by Kolja Nolte
-    * kolja.nolte@gmail.com
+    * kolja@koljanolte.com
     * https://www.koljanolte.com
     *
     * This program is free software; you can redistribute it and/or modify
@@ -203,5 +203,8 @@
          "secondary_title_get_default_settings()[\"secondary_title_\$setting\"]"
       );
 
-      return secondary_title_get_default_settings()[$setting];
+      $secondary_title_default_settings = secondary_title_get_default_settings();
+      $setting                          = $secondary_title_default_settings[$setting];
+
+      return $setting;
    }

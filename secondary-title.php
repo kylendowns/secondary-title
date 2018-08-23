@@ -1,7 +1,7 @@
 <?php
    /**
     * (C) 2018 by Kolja Nolte
-    * kolja.nolte@gmail.com
+    * kolja@koljanolte.com
     * https://www.koljanolte.com
     *
     * This program is free software; you can redistribute it and/or modify
@@ -45,6 +45,9 @@
    /** Handles the donation notification display settings */
    register_deactivation_hook(__FILE__, "secondary_title_reset_donation_notice");
 
+   /** Calls function which adds a link to the settings page on "Plugins" section in the admin area */
+   add_action("plugin_action_links_" . plugin_basename(__FILE__), "secondary_title_add_settings_link");
+
    function secondary_title_load_translations() {
       load_plugin_textdomain(
          "secondary-title",
@@ -55,10 +58,10 @@
       );
    }
 
-   add_action("plugins_loaded", "secondary_title_load_translations");
-
+   /** Defines what file endings should be included */
    $include_files = glob(SECONDARY_TITLE_PATH . "includes/*.php");
 
+   /** Include files inside /includes/ directory */
    foreach($include_files as $include_file) {
       if(realpath($include_file)) {
          require_once $include_file;

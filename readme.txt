@@ -3,9 +3,9 @@ Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
 Tags: title,         alternative title, secondary title, second title, additional title, post title, title
 Tested up to:        4.9.8
-Stable tag:          1.9.6
+Stable tag:          1.9.7
 Requires at least:   4.0
-Requires PHP:        5.2.4
+Requires PHP:        5.2.17
 License:             GPLv2 or later
 License URI:         http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,7 +64,9 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 == Changelog ==
 
 = 1.9.7 =
+* Secondary Title is now compatible with PHP version 5.2.17 and above.
 * Added info icons next to every setting which links to the official documentation where those settings are being explained in detail.
+* Added "Settings" link to the "Plugins" section in the admin area which leads to Secondary Title's settings page.
 * Updated Font Awesome to 5.2.0.
 * Minor restructure of resources directories.
 * Declared unused `secondary_title_get_default_setting()` as deprecated function.
