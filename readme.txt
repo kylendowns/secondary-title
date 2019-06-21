@@ -2,10 +2,10 @@
 Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
 Tags: title,         alternative title, secondary title, second title, additional title, post title, title
-Tested up to:        4.9.8
-Stable tag:          1.9.7
+Tested up to:        5.2
+Stable tag:          2
 Requires at least:   4.0
-Requires PHP:        5.2.17
+Requires PHP:        5.3.0
 License:             GPLv2 or later
 License URI:         http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,17 +13,18 @@ Adds a secondary title to posts, pages and custom post types.
 
 == Description ==
 
-**Secondary Title** is a simple, light-weight plugin that adds an alternative title to posts, pages and/or [custom post types](http://codex.wordpress.org/Post_Types) which you can display automatically, with a shortcode or by using PHP.
+**Secondary Title** is a simple, light-weight plugin that adds an alternative title to posts, pages and/or [custom post types](http://codex.wordpress.org/Post_Types) which can be displayed automatically, with a shortcode or by using PHP.
 
 The plugin comes with an extra settings page which allows you to customize the plugin according to your needs. You can change:
 
 * [post types](http://codex.wordpress.org/Post_Types), categories and specific post IDs the secondary title will be
 shown on,
-* whether the secondary title should be automatically inserted with the standard title (*Auto show*),
+* whether the secondary title should be automatically added to the standard title (*Auto show*),
 * the format both titles are being shown (only works when *Auto show* is activated),
-* the position where the secondary title input field should be displayed (above or below the standard title) within the admin interface,
+* the position where the secondary title input field should be displayed (above or below the standard title) within the admin interface (Classic Editor only),
 * whether the secondary title should only be displayed in the main post and not within widgets etc.,
-* if the secondary title should be usable in [permalinks](http://codex.wordpress.org/Using_Permalinks).
+* if the secondary title should be usable in [permalinks](http://codex.wordpress.org/Using_Permalinks),
+* and even more.
 
 **Please see the [official website](https://www.koljanolte.com/wordpress/plugins/secondary-title/documentation/) for a full documentation.**
 
@@ -31,11 +32,11 @@ shown on,
 
 = Quick Installation =
 
-1. Install Secondary Title either by searching for the plugin with WordPress' native plugin installer found under *Plugins > Add New* or copy the *secondary-title* folder into the */wp-content/plugins/* directory of your WordPress installation.
+1. Install Secondary Title either by searching for the plugin with WordPress' native plugin installer found under *Plugins* → *Add New* or [download the plugin manually](https://downloads.wordpress.org/plugin/secondary-title.zip) and copy the *secondary-title* folder into the */wp-content/plugins/* directory of your WordPress installation.
 2. Activate the plugin in the *Plugins* section of your admin interface.
-3. Go to *Settings > Secondary Title* to customize the plugin as desired.
+3. Go to *Settings* → *Secondary Title* to customize the plugin as desired.
 
-**IMPORTANT:** If *Insert automatically* is set to *No*, you have to use either
+**IMPORTANT:** If the *Auto show* option is set to *Off*, you have to use either
 
 `<?php echo get_secondary_title($post_id, $prefix, $suffix); ?>`
 
@@ -43,9 +44,9 @@ or
 
 `<?php the_secondary_title($post_id, $prefix, $suffix); ?>`
 
-in your theme file(s) (e.g. single.php) to display the secondary title.
+in your theme file(s) (e.g. *single.php*) where you would like the secondary title to be displayed.
 
-**For a more detailed documentation with parameters, functions and examples, please refer to the [official documentation](https://www.koljanolte.com/wordpress/plugins/secondary-title/documentation/)**.
+**For a more detailed documentation with parameters, functions and examples, please see the [official documentation](https://thaikolja.gitbooks.io/secondary-title/)**.
 
 == Frequently Asked Questions ==
 
@@ -55,13 +56,49 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 
 == Screenshots ==
 
-1. Secondary Title with activated "Auto show" function that automatically adds the secondary title to the standard post/page title.
+1. Secondary Title with activated *Auto show* function that automatically adds the secondary title to the standard post/page title separated with a line break (`<br>`).
 
-2. Secondary Title with "auto show" off. Displays the secondary title wherever `<?php the_secondary_title(); ?>` is called.
+2. Secondary Title with activated *Auto show* function that automatically adds the secondary title to the standard post/page title with secondary title in bold (`<strong>`).
 
-3. A section of the plugin's settings page on the admin interface.
+3. Secondary title input field using Gutenberg editor.
+
+4. Secondary title input field using [Classic Editor plugin](https://wordpress.org/plugins/classic-editor/) (WordPress version below 5.0).
+
+5. A section of Secondary Title's settings page.
 
 == Changelog ==
+
+= 2.0.3 =
+* Fixed [a bug](https://wordpress.org/support/topic/php-notice-trying-to-get-property-of-non-object-22/) occurring on invalid posts.
+
+= 2.0.2 =
+* Added full support for [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/) 3.0. [Use `%secondary_title%`](https://semperplugins.com/documentation/title-settings/) to display.
+* Added note reminding that *Input field* and *Column position* option only apply when using Classical Editor in WordPress versions with Gutenberg (>= 5.0).
+* Cosmetic changes to the plugin's settings page.
+
+= 2.0.1 =
+* Hotfix: Moved file `admin/settings.php` to `includes/setings.php` due to PHP complications.
+
+= 2.0.0 =
+* Added support for Gutenberg editor. The secondary title can now be entered via a meta box on the sidebar of the editor.
+* Added minimized versions for CSS (compiled from [SCSS](https://www.quora.com/What-is-SCSS-How-does-it-differ-from-CSS)) and JS files for performance improvement.
+* Added partly support for [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/). Use `%secondary_title%` to display.
+* Updated Font Awesome to 5.8.1.
+* Updated translations.
+* Updated screenshots.
+* Fixed bug with reoccurring donation notice.
+* Minor style adjustments.
+* Removed `/includes/gutenberg-info.php` and the notice saying "Secondary Title doesn't work anymore".
+* Moved `/includes/settings.php` to `/admin/settings.php`.
+
+= 1.9.9 =
+* This version was skipped.
+
+= 1.9.8 =
+* This version was skipped.
+
+= 1.9.7.5 =
+* Hotfix and minor adjustments.
 
 = 1.9.7 =
 * Secondary Title is now compatible with PHP version 5.2.17 and above.
@@ -290,6 +327,30 @@ conflicts.
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 2.0.3 =
+[A bug](https://wordpress.org/support/topic/php-notice-trying-to-get-property-of-non-object-22/) occurring on invalid posts has been fixed.
+
+= 2.0.2 =
+Support for [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/) (version 3 and above).
+
+= 2.0.1 =
+Hotfix.
+
+= 2.0.0 =
+This version adds a secondary title input field to the Gutenberg editor, removes annoying admin notices and partly supports [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/).
+
+= 1.9.9 =
+This version was skipped.
+
+= 1.9.8 =
+This version was skipped.
+
+= 1.9.7.5 =
+Hotfix and minor adjustments.
+
+= 1.9.7 =
+PHP > 5.2.17 compatibility and info icons next to options on settings page.
 
 = 1.9.6 =
 Version 1.9.6 contains a series of code and performance improvements and some new functions.

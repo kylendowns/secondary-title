@@ -1,7 +1,7 @@
 <?php
    /**
-    * (C) 2018 by Kolja Nolte
-    * kolja@koljanolte.com
+    * (C) 2019 by Kolja Nolte
+    * kolja.nolte@gmail.com
     * https://www.koljanolte.com
     *
     * This program is free software; you can redistribute it and/or modify
@@ -33,9 +33,9 @@
     * Build the invisible secondary title input on edit pages
     * to let jQuery displaying it (see admin.js).
     *
-    * @since 0.1.0
-    *
     * @return bool
+    *
+    * @since 0.1.0
     */
    function init_secondary_title_admin_posts() {
       $title_input_position = secondary_title_get_setting("input_field_position");
@@ -47,9 +47,10 @@
 
       $post_id         = get_the_ID();
       $secondary_title = get_secondary_title($post_id);
+      $input_title     = esc_html(__("Enter your secondary title", "secondary-title"));
       ?>
-      <input type="hidden" id="secondary-title-input-position" value="<?php echo $title_input_position; ?>"/>
-      <input type="text" size="30" id="secondary-title-input" class="secondary-title-input" placeholder="<?php _e("Enter secondary title here", "secondary-title"); ?>" name="secondary_post_title" hidden value="<?php echo esc_html($secondary_title); ?>"/>
+      <input type="hidden" id="secondary-title-input-position" value="<?php echo $title_input_position; ?>" />
+      <input type="text" size="30" id="secondary-title-input" class="secondary-title-input" placeholder="<?php _e("Enter secondary title here", "secondary-title"); ?>" name="secondary_post_title" hidden value="<?php echo esc_html($secondary_title); ?>" title="<?php echo $input_title; ?>" />
       <?php
 
       return true;
@@ -60,9 +61,9 @@
    /**
     * @param array $columns Default columns
     *
-    * @since 1.9.3
-    *
     * @return array Modified columns
+    *
+    * @since 1.9.3
     */
    function secondary_title_register_overview_column(array $columns) {
       /** Value of the position set on the Secondary Title admin page */
@@ -118,6 +119,11 @@
       return $columns;
    }
 
+   /**
+    * Initializes the overview columns.
+    *
+    * @since 1.4.3
+    */
    function secondary_title_load_overview_columns_hook() {
       $activated_post_types = secondary_title_get_setting("post_types");
 
@@ -159,16 +165,14 @@
       /** Loop through column names */
       switch($column_name) {
 
-         /** If current column name is the secondary title, then... */
-         case "secondary_title":
+         /** If current column name is the secondary title, then... */ case "secondary_title":
 
-            /** ...the actual secondary title of the post is being fetched */
-            $post_secondary_title = get_secondary_title($post_id);
+         /** ...the actual secondary title of the post is being fetched */ $post_secondary_title = get_secondary_title($post_id);
 
-            /** Display the secondary title of the current post within a row */
-            echo $post_secondary_title;
+         /** Display the secondary title of the current post within a row */
+         echo $post_secondary_title;
 
-            /** Stop the loop */
-            break;
+         /** Stop the loop */
+         break;
       }
    }

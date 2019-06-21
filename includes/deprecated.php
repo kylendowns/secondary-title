@@ -1,7 +1,7 @@
 <?php
    /**
-    * (C) 2018 by Kolja Nolte
-    * kolja@koljanolte.com
+    * (C) 2019 by Kolja Nolte
+    * kolja.nolte@gmail.com
     * https://www.koljanolte.com
     *
     * This program is free software; you can redistribute it and/or modify
@@ -22,8 +22,6 @@
    }
 
    /**
-    * @deprecated
-    *
     * @param int    $post_id
     * @param string $prefix
     * @param string $suffix
@@ -31,6 +29,8 @@
     * @param array  $options
     *
     * @return string
+    *
+    * @deprecated
     */
    function get_secondary_title_link($post_id = 0, $prefix = "", $suffix = "", $use_settings = false, array $options = array()) {
       _deprecated_function(
@@ -106,15 +106,15 @@
    /**
     * Displays the secondary title link.
     *
-    * @since 0.5.0
-    *
-    * @deprecated
-    *
     * @param int    $post_id
     * @param string $prefix
     * @param string $suffix
     * @param bool   $use_settings
     * @param array  $options
+    *
+    * @deprecated
+    *
+    * @since 0.5.0
     */
    function the_secondary_title_link($post_id = 0, $prefix = "", $suffix = "", $use_settings = false, array $options = array()) {
       _deprecated_function(
@@ -134,14 +134,14 @@
    /**
     * Returns an error or success message on top of the screen.
     *
-    * @since 1.6.0
-    *
-    * @deprecated
-    *
     * @param        $message
     * @param string $type
     *
     * @return string
+    *
+    * @deprecated
+    *
+    * @since 1.6.0
     */
    function secondary_title_get_message($message, $type = "success") {
       _deprecated_function(
@@ -169,12 +169,12 @@
    /**
     * Displays an error or success message on top of the screen.
     *
+    * @param        $message
+    * @param string $type
+    *
     * @since 1.6.0
     *
     * @deprecated
-    *
-    * @param        $message
-    * @param string $type
     */
    function secondary_title_the_message($message, $type = "success") {
       _deprecated_function(
@@ -188,13 +188,13 @@
    /**
     * Returns a single default setting and its value.
     *
-    * @since 0.1.0
-    *
-    * @deprecated
-    *
     * @param string $setting
     *
     * @return mixed
+    *
+    * @since 0.1.0
+    *
+    * @deprecated
     */
    function secondary_title_get_default_setting($setting) {
       _deprecated_function(
