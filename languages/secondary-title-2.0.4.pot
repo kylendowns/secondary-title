@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Secondary Title\n"
-"POT-Creation-Date: 2019-07-21 04:30+0700\n"
+"POT-Creation-Date: 2021-02-25 12:50+0100\n"
 "PO-Revision-Date: 2017-12-15 05:19+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: secondary-title.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -20,53 +20,53 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/admin.php:50
+#: includes/admin.php:51
 msgid "Enter your secondary title"
 msgstr ""
 
-#: includes/admin.php:53 includes/hooks.php:46
+#: includes/admin.php:54 includes/hooks.php:47
 msgid "Enter secondary title here"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: includes/admin.php:79 includes/hooks.php:62
+#: includes/admin.php:80 includes/hooks.php:63
 msgid "Secondary Title"
 msgstr ""
 
-#: includes/functions.php:526
+#: includes/functions.php:524
 msgid "Click here to learn more about this setting"
 msgstr ""
 
-#: includes/hooks.php:145
+#: includes/hooks.php:148
 msgid "Secondary title"
 msgstr ""
 
-#: includes/hooks.php:311 includes/hooks.php:627
+#: includes/hooks.php:317 includes/hooks.php:626
 msgid "Settings"
 msgstr ""
 
-#: includes/hooks.php:556
+#: includes/hooks.php:559
 msgid "Feeling generous?"
 msgstr ""
 
-#: includes/hooks.php:562
+#: includes/hooks.php:565
 #, php-format
-msgid "Ah, look at that, you are using my plugin %s. Excellent choice 😉"
+msgid "<p>Ah, look at that, you are using my plugin %s. Excellent choice 😉</p>"
 msgstr ""
 
 #: includes/hooks.php:572
 msgid ""
-"If you want to make sure that the plugin continues to be updated to "
+"<p>If you want to make sure that the plugin continues to be updated to "
 "guarantee compatibility with future versions your plugins or themes, you can "
 "help by making a small donation. This will benefit not only yourself but the "
-"whole WordPress community!"
+"whole WordPress community!</p>"
 msgstr ""
 
-#: includes/hooks.php:581
+#: includes/hooks.php:580
 msgid "Keep Secondary Title alive by Donating via PayPal"
 msgstr ""
 
-#: includes/hooks.php:585
+#: includes/hooks.php:584
 msgid "Stop displaying this annoying notice"
 msgstr ""
 
@@ -74,49 +74,49 @@ msgstr ""
 msgid "Dismiss this notice."
 msgstr ""
 
-#: includes/hooks.php:624
+#: includes/hooks.php:623
 msgid "Go to Secondary Title's options page"
 msgstr ""
 
-#: includes/settings.php:40
+#: includes/settings.php:41
 msgid "You are not authorized to view this page."
 msgstr ""
 
-#: includes/settings.php:67
+#: includes/settings.php:68
 msgid "Are you sure you want to reset all settings?"
 msgstr ""
 
-#: includes/settings.php:78
+#: includes/settings.php:79
 msgid "The settings have been successfully updated."
 msgstr ""
 
-#: includes/settings.php:88
+#: includes/settings.php:89
 msgid "All settings have been reset to their default values."
 msgstr ""
 
-#: includes/settings.php:98
+#: includes/settings.php:99
 msgid "General Settings"
 msgstr ""
 
-#: includes/settings.php:106
+#: includes/settings.php:107
 msgid "Auto show"
 msgstr ""
 
-#: includes/settings.php:113 includes/settings.php:189
+#: includes/settings.php:114 includes/settings.php:190
 #: includes/settings.php:341
 msgid "On"
 msgstr ""
 
-#: includes/settings.php:115 includes/settings.php:191
+#: includes/settings.php:116 includes/settings.php:192
 #: includes/settings.php:345
 msgid "Off"
 msgstr ""
 
-#: includes/settings.php:118
+#: includes/settings.php:119
 msgid "Automatically merges the secondary title with the standard title."
 msgstr ""
 
-#: includes/settings.php:122
+#: includes/settings.php:123
 #, php-format
 msgid ""
 "To manually insert the secondary title in your theme, use %s. See the <a "
@@ -124,34 +124,34 @@ msgid ""
 "documentation</a> for additional parameters."
 msgstr ""
 
-#: includes/settings.php:131
+#: includes/settings.php:132
 msgid "Title format"
 msgstr ""
 
-#: includes/settings.php:136
+#: includes/settings.php:137
 msgid "E.g.: %secondary_title%: %title%"
 msgstr ""
 
-#: includes/settings.php:140
+#: includes/settings.php:141
 #, php-format
 msgid ""
 "Replaces the default title with the given format. Use %s for the main title "
 "and %s for the secondary title."
 msgstr ""
 
-#: includes/settings.php:141
+#: includes/settings.php:142
 msgid "Add title to title format input"
 msgstr ""
 
-#: includes/settings.php:142
+#: includes/settings.php:143
 msgid "Add secondary title to title format input"
 msgstr ""
 
-#: includes/settings.php:154
+#: includes/settings.php:155
 msgid "Preview"
 msgstr ""
 
-#: includes/settings.php:164
+#: includes/settings.php:165
 #, php-format
 msgid ""
 "<b>Note:</b> To style the output, use <a href=\"%s\" title=\"See an "
@@ -159,34 +159,27 @@ msgid ""
 "e.g.:<br />%s"
 msgstr ""
 
-#: includes/settings.php:164
+#: includes/settings.php:165
 msgid "Add code to title format input"
 msgstr ""
 
-#: includes/settings.php:176
+#: includes/settings.php:177
 msgid "Display Rules"
 msgstr ""
 
-#: includes/settings.php:183
+#: includes/settings.php:184
 msgid "Only show in main post"
 msgstr ""
 
-#: includes/settings.php:194
+#: includes/settings.php:195
 msgid ""
 "Only displays the secondary title if the post is a main post and "
 "<strong>not</strong> within a widget etc."
 msgstr ""
 
-#: includes/settings.php:201
+#: includes/settings.php:202
 msgid "Post types"
 msgstr ""
-
-#: includes/settings.php:233
-#, php-format
-msgid "1 post"
-msgid_plural "%s posts"
-msgstr[0] ""
-msgstr[1] ""
 
 #: includes/settings.php:247
 msgid ""
@@ -321,7 +314,7 @@ msgid ""
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://www.koljanolte.com/wordpress/plugins/secondary-title/"
+msgid "https://www.kolja-nolte.com/wordpress/plugins/secondary-title/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -333,5 +326,5 @@ msgid "Kolja Nolte"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://www.koljanolte.com"
+msgid "https://www.kolja-nolte.com"
 msgstr ""

@@ -2,12 +2,12 @@
 Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
 Tags: title,         alternative title, secondary title, second title, additional title, post title, title
-Tested up to:        5.2
-Stable tag:          2
+Tested up to:        5.6.2
+Stable tag:          2.0.4
 Requires at least:   4.0
-Requires PHP:        5.3.0
-License:             GPLv2 or later
-License URI:         http://www.gnu.org/licenses/gpl-2.0.html
+Requires PHP:        7.1
+License:             GPLv3 or later
+License URI:         https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Adds a secondary title to posts, pages and custom post types.
 
@@ -26,7 +26,7 @@ shown on,
 * if the secondary title should be usable in [permalinks](http://codex.wordpress.org/Using_Permalinks),
 * and even more.
 
-**Please see the [official website](https://www.koljanolte.com/wordpress/plugins/secondary-title/documentation/) for a full documentation.**
+**Please see the [official website](https://www.kolja-nolte.com/wordpress/plugins/secondary-title/documentation/) for a full documentation.**
 
 == Installation ==
 
@@ -68,8 +68,15 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 
 == Changelog ==
 
+= 2.0.4 =
+* Fixed [bug](https://wordpress.org/support/topic/php-notice-trying-to-get-property-of-non-object-on-line-471/) printing `PHP Notice: Trying to get property of non-object on line 471`
+* Fixed [bug](https://wordpress.org/support/topic/does-not-display-name-of-post-types-in-settings/) that resulted in not showing the correct post type names on the settings page
+* Updated code to match current PHP standards
+* Updated dead URLs leading to the documentation website
+
 = 2.0.3 =
-* Fixed [a bug](https://wordpress.org/support/topic/php-notice-trying-to-get-property-of-non-object-22/) occurring on invalid posts.
+* Compatibility with WordPress 5.5 and below.
+* Changed the minimum required PHP version to 7.1.
 
 = 2.0.2 =
 * Added full support for [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/) 3.0. [Use `%secondary_title%`](https://semperplugins.com/documentation/title-settings/) to display.
@@ -295,14 +302,14 @@ conflicts.
 = 0.5.1 =
 * Fixed bug that falsely added slashes to HTML attributes in title format.
 * Fixed jQuery bug in the admin posts/
-* Added `<?php has_secondary_title(); ?>` function. See [the official documentation](http://www.koljanolte.com/koljanolte.com/wordpress/plugins/secondary-title/#Parameters) for more information.
+* Added `<?php has_secondary_title(); ?>` function. See [the official documentation](http://www.kolja-nolte.com/kolja-nolte.com/wordpress/plugins/secondary-title/#Parameters) for more information.
 
 = 0.5.0 =
 * Fixed bug where the secondary title was not shown if the standard title contains "..." (thanks to Vangelis).
 * Added *Select all* and *Unselect all* script for checkbox lists on settings page.
 * Added secondary title display in admin posts/pages list.
 * Added `<?php get_secondary_title_link($post_id, $values); ?>` and `<?php the_secondary_title_link($post_id, $values); ?>` functions
-  to quickly create the secondary title as a link to its post. See [the official documentation](http://www.koljanolte.com/koljanolte.com/wordpress/plugins/secondary-title/#Parameters) for more information.
+  to quickly create the secondary title as a link to its post. See [the official documentation](http://www.kolja-nolte.com/kolja-nolte.com/wordpress/plugins/secondary-title/#Parameters) for more information.
 * Updated documentation/readme.txt.
 
 = 0.4.0 =
@@ -328,8 +335,13 @@ conflicts.
 
 == Upgrade Notice ==
 
+= 2.0.4 =
+A few bugs have been fixed and some code sections rewritten.
+
 = 2.0.3 =
-[A bug](https://wordpress.org/support/topic/php-notice-trying-to-get-property-of-non-object-22/) occurring on invalid posts has been fixed.
+To prepare you for future updates, Secondary Title requires now WordPress 7.1 (as does WordPress 5.2).
+
+This update is mainly to tell the WordPress.org repository that Secondary Title is not a dead plugin. Expect more significant updates soon.
 
 = 2.0.2 =
 Support for [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/) (version 3 and above).
@@ -365,7 +377,7 @@ Hotfix for 1.9.3 where obsolete JS code was being executed on the wrong page, de
 Fixed HTML in <header> tag and converted the secondary title column on page overviews into more reliable PHP. **Major changes are expected to be included in the next release.**
 
 = 1.9.2 =
-Created a comprehensive [documentation]((https://www.koljanolte.com/wordpress/plugins/secondary-title/documentation/) and added [shortcodes](https://thaikolja.gitbooks.io/secondary-title/shortcodes.html) to display the secondary title inside your posts.
+Created a comprehensive [documentation]((https://www.kolja-nolte.com/wordpress/plugins/secondary-title/documentation/) and added [shortcodes](https://thaikolja.gitbooks.io/secondary-title/shortcodes.html) to display the secondary title inside your posts.
 
 = 1.9.1 =
 WordPress 4.6 and WP.org translations compatibility.
