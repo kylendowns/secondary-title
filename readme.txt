@@ -1,8 +1,8 @@
 === Secondary Title ===
 Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
-Tags: title,         alternative title, secondary title, second title, additional title, post title, title
-Tested up to:        5.6.2
+Tags: title,         alternative title, secondary title, second title, post title, title
+Tested up to:        5.6
 Stable tag:          2.0.4
 Requires at least:   4.0
 Requires PHP:        7.1
