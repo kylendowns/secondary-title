@@ -1,1 +1,2 @@
-/** Nothing to see here, just protecting your directory */
+<?php
+	die( "403 - You are not authorized to view this page." );

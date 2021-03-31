@@ -2,8 +2,8 @@
 Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
 Tags: title,         alternative title, secondary title, second title, post title, title
-Tested up to:        5.6
-Stable tag:          2.0.4
+Tested up to:        5.7
+Stable tag:          2.0.5
 Requires at least:   4.0
 Requires PHP:        7.1
 License:             GPLv3 or later
@@ -67,6 +67,18 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 5. A section of Secondary Title's settings page.
 
 == Changelog ==
+
+= 2.0.5 =
+* Added compatibility with WordPress 5.7
+* Removed all previously (since version 1.9.5) deprecated functions from the plugin's codebase
+* Removed "Input field position" option when using WordPress 5.0 and above
+* Removed dismissible notice on all pages except for Secondary Title's settings page
+* Fixed PHP notice
+* Fixed code formatting in PHP file headers
+* PHP files now use `die()` instead of `return` statement to prevent files from being accessed directly
+* Code in SCSS files have been nested for better readability
+* Updated language files (.pot)
+* Added type annotation to certain PHP functions
 
 = 2.0.4 =
 * Fixed [bug](https://wordpress.org/support/topic/php-notice-trying-to-get-property-of-non-object-on-line-471/) printing `PHP Notice: Trying to get property of non-object on line 471`
@@ -334,6 +346,9 @@ conflicts.
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 2.0.5 =
+Secondary Title is now compatible with WordPress 5.7, the latest WP version.
 
 = 2.0.4 =
 A few bugs have been fixed and some code sections rewritten.

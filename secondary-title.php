@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * (C) Copyright 2021 by Kolja Nolte
  * kolja.nolte@gmail.com
  * https://www.kolja-nolte.com
@@ -9,7 +9,7 @@
  * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
- * @see https://wordpress.org/plugins/secondary-title/
+ * @see    https://wordpress.org/plugins/secondary-title/
  * @author Kolja Nolte <kolja.nolte@gmail.com>
  */
 
@@ -17,7 +17,7 @@
  * Plugin Name:   Secondary Title
  * Plugin URI:    https://www.kolja-nolte.com/wordpress/plugins/secondary-title/
  * Description:   Adds a secondary title to posts, pages and custom post types.
- * Version:       2.0.4
+ * Version:       2.0.5
  * Author:        Kolja Nolte
  * Author URI:    https://www.kolja-nolte.com
  * License:       GPLv2 or later
@@ -28,56 +28,43 @@
 /**
  * Stop script when the file is called directly.
  */
-if (!function_exists("add_action")) {
-    return false;
+if ( ! function_exists( "add_action" ) ) {
+	die( "403 - You are not authorized to view this page." );
 }
 
-define("SECONDARY_TITLE_PATH", plugin_dir_path(__FILE__));
-define("SECONDARY_TITLE_URL", plugin_dir_url(__FILE__));
-define("SECONDARY_TITLE_VERSION", "2.0.4");
+define( "SECONDARY_TITLE_PATH", plugin_dir_path( __FILE__ ) );
+define( "SECONDARY_TITLE_URL", plugin_dir_url( __FILE__ ) );
+define( "SECONDARY_TITLE_VERSION", "2.0.5" );
 
 /** Install default settings (if not set yet) */
-register_activation_hook(__FILE__, "secondary_title_install");
+register_activation_hook( __FILE__, "secondary_title_install" );
 
 /** Handles the donation notification display settings */
-register_deactivation_hook(__FILE__, "secondary_title_reset_donation_notice");
+register_deactivation_hook( __FILE__, "secondary_title_reset_donation_notice" );
 
 /** Calls function which adds a link to the settings page on "Plugins" section in the admin area */
-add_action("plugin_action_links_" . plugin_basename(__FILE__), "secondary_title_add_settings_link");
+add_action( "plugin_action_links_" . plugin_basename( __FILE__ ), "secondary_title_add_settings_link" );
 
 function secondary_title_load_translations() {
-    load_plugin_textdomain(
-        "secondary-title",
-        false,
-        plugin_basename(
-            plugin_dir_path(__FILE__)
-        ) . "/languages"
-    );
+	load_plugin_textdomain(
+		"secondary-title",
+		false,
+		plugin_basename(
+			plugin_dir_path( __FILE__ )
+		) . "/languages"
+	);
 }
 
-/** Include plugin files */
-$include_directories = [
-    "includes"
-];
+/** Find all .php files in the "includes" directory */
+$include_files = glob( plugin_dir_path( __FILE__ ) . "/includes/*.php" );
 
-/** Loop through the set directories */
-foreach ($include_directories as $include_directory) {
-    $include_directory = plugin_dir_path(__FILE__) . $include_directory;
+/** Loop through all .php files in the "includes" directory */
+foreach ( $include_files as $include_file ) {
+	/** Skip file if file is not valid */
+	if ( ! is_file( $include_file ) || is_dir( $include_file ) ) {
+		continue;
+	}
 
-    /** Skip directory if it's not a valid directory */
-    if (!is_dir($include_directory)) {
-        continue;
-    }
-
-    /** Gather all .php files within the current directory */
-    $include_files = glob($include_directory . "/*.php");
-    foreach ($include_files as $include_file) {
-        /** Skip file if file is not valid */
-        if (!is_file($include_file)) {
-            continue;
-        }
-
-        /** Include current file */
-        require_once $include_file;
-    }
+	/** Include current file */
+	require_once $include_file;
 }
