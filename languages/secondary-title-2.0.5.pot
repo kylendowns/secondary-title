@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Secondary Title\n"
-"POT-Creation-Date: 2021-02-25 12:50+0100\n"
+"POT-Creation-Date: 2021-03-31 22:07+0200\n"
 "PO-Revision-Date: 2017-12-15 05:19+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,41 +20,41 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/admin.php:51
+#: includes/admin.php:49
 msgid "Enter your secondary title"
 msgstr ""
 
-#: includes/admin.php:54 includes/hooks.php:47
+#: includes/admin.php:52 includes/hooks.php:45
 msgid "Enter secondary title here"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: includes/admin.php:80 includes/hooks.php:63
+#: includes/admin.php:78 includes/hooks.php:61
 msgid "Secondary Title"
 msgstr ""
 
-#: includes/functions.php:524
+#: includes/functions.php:521
 msgid "Click here to learn more about this setting"
 msgstr ""
 
-#: includes/hooks.php:148
+#: includes/hooks.php:145
 msgid "Secondary title"
 msgstr ""
 
-#: includes/hooks.php:317 includes/hooks.php:626
+#: includes/hooks.php:314 includes/hooks.php:666
 msgid "Settings"
 msgstr ""
 
-#: includes/hooks.php:559
+#: includes/hooks.php:561
 msgid "Feeling generous?"
 msgstr ""
 
-#: includes/hooks.php:565
+#: includes/hooks.php:567
 #, php-format
 msgid "<p>Ah, look at that, you are using my plugin %s. Excellent choice 😉</p>"
 msgstr ""
 
-#: includes/hooks.php:572
+#: includes/hooks.php:574
 msgid ""
 "<p>If you want to make sure that the plugin continues to be updated to "
 "guarantee compatibility with future versions your plugins or themes, you can "
@@ -62,61 +62,61 @@ msgid ""
 "whole WordPress community!</p>"
 msgstr ""
 
-#: includes/hooks.php:580
+#: includes/hooks.php:582
 msgid "Keep Secondary Title alive by Donating via PayPal"
 msgstr ""
 
-#: includes/hooks.php:584
+#: includes/hooks.php:586
 msgid "Stop displaying this annoying notice"
 msgstr ""
 
-#: includes/hooks.php:589
+#: includes/hooks.php:591
 msgid "Dismiss this notice."
 msgstr ""
 
-#: includes/hooks.php:623
+#: includes/hooks.php:663
 msgid "Go to Secondary Title's options page"
 msgstr ""
 
-#: includes/settings.php:41
+#: includes/settings.php:39
 msgid "You are not authorized to view this page."
 msgstr ""
 
-#: includes/settings.php:68
+#: includes/settings.php:65
 msgid "Are you sure you want to reset all settings?"
 msgstr ""
 
-#: includes/settings.php:79
+#: includes/settings.php:76
 msgid "The settings have been successfully updated."
 msgstr ""
 
-#: includes/settings.php:89
+#: includes/settings.php:85
 msgid "All settings have been reset to their default values."
 msgstr ""
 
-#: includes/settings.php:99
+#: includes/settings.php:95
 msgid "General Settings"
 msgstr ""
 
-#: includes/settings.php:107
+#: includes/settings.php:103
 msgid "Auto show"
 msgstr ""
 
-#: includes/settings.php:114 includes/settings.php:190
-#: includes/settings.php:341
+#: includes/settings.php:110 includes/settings.php:186
+#: includes/settings.php:335
 msgid "On"
 msgstr ""
 
-#: includes/settings.php:116 includes/settings.php:192
-#: includes/settings.php:345
+#: includes/settings.php:112 includes/settings.php:188
+#: includes/settings.php:339
 msgid "Off"
 msgstr ""
 
-#: includes/settings.php:119
+#: includes/settings.php:115
 msgid "Automatically merges the secondary title with the standard title."
 msgstr ""
 
-#: includes/settings.php:123
+#: includes/settings.php:119
 #, php-format
 msgid ""
 "To manually insert the secondary title in your theme, use %s. See the <a "
@@ -124,34 +124,34 @@ msgid ""
 "documentation</a> for additional parameters."
 msgstr ""
 
-#: includes/settings.php:132
+#: includes/settings.php:128
 msgid "Title format"
 msgstr ""
 
-#: includes/settings.php:137
+#: includes/settings.php:133
 msgid "E.g.: %secondary_title%: %title%"
 msgstr ""
 
-#: includes/settings.php:141
+#: includes/settings.php:137
 #, php-format
 msgid ""
 "Replaces the default title with the given format. Use %s for the main title "
 "and %s for the secondary title."
 msgstr ""
 
-#: includes/settings.php:142
+#: includes/settings.php:138
 msgid "Add title to title format input"
 msgstr ""
 
-#: includes/settings.php:143
+#: includes/settings.php:139
 msgid "Add secondary title to title format input"
 msgstr ""
 
-#: includes/settings.php:155
+#: includes/settings.php:151
 msgid "Preview"
 msgstr ""
 
-#: includes/settings.php:165
+#: includes/settings.php:161
 #, php-format
 msgid ""
 "<b>Note:</b> To style the output, use <a href=\"%s\" title=\"See an "
@@ -159,153 +159,153 @@ msgid ""
 "e.g.:<br />%s"
 msgstr ""
 
-#: includes/settings.php:165
+#: includes/settings.php:161
 msgid "Add code to title format input"
 msgstr ""
 
-#: includes/settings.php:177
+#: includes/settings.php:173
 msgid "Display Rules"
 msgstr ""
 
-#: includes/settings.php:184
+#: includes/settings.php:180
 msgid "Only show in main post"
 msgstr ""
 
-#: includes/settings.php:195
+#: includes/settings.php:191
 msgid ""
 "Only displays the secondary title if the post is a main post and "
 "<strong>not</strong> within a widget etc."
 msgstr ""
 
-#: includes/settings.php:202
+#: includes/settings.php:198
 msgid "Post types"
 msgstr ""
 
-#: includes/settings.php:247
+#: includes/settings.php:243
 msgid ""
 "Only displays the secondary title if post among the selected post types. "
 "Select none for all."
 msgstr ""
 
-#: includes/settings.php:254
+#: includes/settings.php:250
 msgid "Categories"
 msgstr ""
 
-#: includes/settings.php:274
+#: includes/settings.php:270
 #, php-format
 msgid "There are %s posts in %s"
 msgstr ""
 
-#: includes/settings.php:289
+#: includes/settings.php:283
 msgid "Select all"
 msgstr ""
 
-#: includes/settings.php:294
+#: includes/settings.php:288
 msgid "Unselect all"
 msgstr ""
 
-#: includes/settings.php:299
+#: includes/settings.php:293
 msgid ""
 "Displays the secondary title only if post is among the selected categories. "
 "Select none for all."
 msgstr ""
 
-#: includes/settings.php:308
+#: includes/settings.php:302
 msgid "Post IDs"
 msgstr ""
 
-#: includes/settings.php:312
+#: includes/settings.php:306
 msgid "E.g. 13, 71, 33"
 msgstr ""
 
-#: includes/settings.php:314
+#: includes/settings.php:308
 msgid ""
 "Only uses the secondary title if post is among the entered post IDs. Use "
 "commas to separate multiple IDs."
 msgstr ""
 
-#: includes/settings.php:325
+#: includes/settings.php:319
 msgid "Miscellaneous Settings "
 msgstr ""
 
-#: includes/settings.php:333
+#: includes/settings.php:327
 msgid "Include in search"
 msgstr ""
 
-#: includes/settings.php:349
+#: includes/settings.php:343
 msgid "Makes the secondary title searchable."
 msgstr ""
 
-#: includes/settings.php:357
+#: includes/settings.php:352
 msgid "Input field"
 msgstr ""
 
-#: includes/settings.php:364
+#: includes/settings.php:359
 msgid "Above standard title"
 msgstr ""
 
-#: includes/settings.php:366
+#: includes/settings.php:361
 msgid "Below standard title"
 msgstr ""
 
-#: includes/settings.php:369
+#: includes/settings.php:364
 msgid ""
 "Determines the position of the secondary title input field on add/edit post "
 "pages within the admin area."
 msgstr ""
 
-#: includes/settings.php:373 includes/settings.php:405
+#: includes/settings.php:365 includes/settings.php:397
 msgid "Note"
 msgstr ""
 
-#: includes/settings.php:375 includes/settings.php:407
+#: includes/settings.php:367 includes/settings.php:399
 msgid "This option only applies when using the Classic Editor plugin."
 msgstr ""
 
-#: includes/settings.php:385
+#: includes/settings.php:377
 msgid "Column position"
 msgstr ""
 
-#: includes/settings.php:393
+#: includes/settings.php:385
 msgid "Left of primary title"
 msgstr ""
 
-#: includes/settings.php:397
+#: includes/settings.php:389
 msgid "Right of primary title"
 msgstr ""
 
-#: includes/settings.php:401
+#: includes/settings.php:393
 #, php-format
 msgid ""
 "Specifies the position of the secondary title in regard to the primary title "
 "on <a href=\"%s\">post overview</a> pages within the admin area."
 msgstr ""
 
-#: includes/settings.php:420
+#: includes/settings.php:412
 msgid "Click to save your changes"
 msgstr ""
 
-#: includes/settings.php:422
+#: includes/settings.php:414
 msgid "Save Changes"
 msgstr ""
 
-#: includes/settings.php:424
+#: includes/settings.php:416
 msgid "Click to reset settings to their default values"
 msgstr ""
 
-#: includes/settings.php:426
+#: includes/settings.php:418
 msgid "Reset Settings"
 msgstr ""
 
-#: includes/settings.php:428
+#: includes/settings.php:420
 msgid "Click to view the full documentation of Secondary Title"
 msgstr ""
 
-#: includes/settings.php:430
+#: includes/settings.php:422
 msgid "View Full Documentation"
 msgstr ""
 
-#: includes/settings.php:436
+#: includes/settings.php:428
 #, php-format
 msgid ""
 "Found an error? Help making Secondary Title better by <a href=\"%s\" title="
