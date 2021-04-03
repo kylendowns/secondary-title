@@ -3,7 +3,7 @@ Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
 Tags: title,         alternative title, secondary title, second title, post title, title
 Tested up to:        5.7
-Stable tag:          2.0.5
+Stable tag:          2.0.6
 Requires at least:   4.0
 Requires PHP:        7.1
 License:             GPLv3 or later
@@ -67,6 +67,9 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 5. A section of Secondary Title's settings page.
 
 == Changelog ==
+
+= 2.0.6 =
+* Fixed bug resulting in `PHP fatal error` when using undeclared variables in function parameters (thanks to [@philsimon](https://wordpress.org/support/topic/latest-version-causes-posts-to-crash/))
 
 = 2.0.5 =
 * Added compatibility with WordPress 5.7
@@ -346,6 +349,9 @@ conflicts.
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 2.0.6 =
+A hotfix to remove [a bug](https://wordpress.org/support/topic/latest-version-causes-posts-to-crash/) that might lead to a PHP fatal error.
 
 = 2.0.5 =
 Secondary Title is now compatible with WordPress 5.7, the latest WP version.
