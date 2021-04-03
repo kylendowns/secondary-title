@@ -69,7 +69,7 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 == Changelog ==
 
 = 2.0.6 =
-* Fixed bug resulting in `PHP fatal error` when using undeclared variables in function parameters (thanks to [@philsimon](https://wordpress.org/support/topic/latest-version-causes-posts-to-crash/))
+* Fixed [bug resulting in `PHP fatal error`](https://wordpress.org/support/topic/latest-version-causes-posts-to-crash/) when using undeclared variables in function parameters (thanks to [@philsimon](https://wordpress.org/support/users/philsimon/))
 
 = 2.0.5 =
 * Added compatibility with WordPress 5.7
@@ -342,7 +342,7 @@ conflicts.
 = 0.2.0 =
 * Installs default values on plugin activation.
 * Added screenshots.
-* Added $prefix and $suffix parameter for `<?php get_secondary_title(); ?>` and `<?php the_secondary_title(); ?>`.
+* Added ``$prefix` and ``$suffix` parameter for `<?php get_secondary_title(); ?>` and `<?php the_secondary_title(); ?>`.
 * Updated FAQ.
 
 = 0.1.0 =
