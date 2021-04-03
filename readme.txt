@@ -339,6 +339,8 @@ conflicts.
 * Added translation to Thai.
 * Updated translation files.
 
+abc
+
 = 0.2.0 =
 * Installs default values on plugin activation.
 * Added screenshots.
