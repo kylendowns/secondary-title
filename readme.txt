@@ -342,7 +342,7 @@ conflicts.
 = 0.2.0 =
 * Installs default values on plugin activation.
 * Added screenshots.
-* Added ``$prefix` and ``$suffix` parameter for `<?php get_secondary_title(); ?>` and `<?php the_secondary_title(); ?>`.
+* Added `$prefix` and `$suffix` parameter for `<?php get_secondary_title(); ?>` and `<?php the_secondary_title(); ?>`.
 * Updated FAQ.
 
 = 0.1.0 =
