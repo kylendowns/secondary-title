@@ -203,7 +203,7 @@ function get_secondary_title_post_categories(): array {
  * @since 0.1.0
  *
  */
-function get_secondary_title( $post_id = 0, string $prefix = "", string $suffix = "", bool $use_settings = false ): string {
+function get_secondary_title( $post_id = 0, $prefix = "", $suffix = "", $use_settings = false ): string {
 	/** If $post_id not set, use current post ID */
 	if ( ! $post_id ) {
 		$post_id = (int) get_the_ID();
