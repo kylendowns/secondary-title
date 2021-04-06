@@ -69,8 +69,8 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 == Changelog ==
 
 = 2.0.7 =
-* Added support for [WP Typography plugin](https://wordpress.org/plugins/wp-typography/)
-* Fixed [bug](https://wordpress.org/support/topic/auto-show-secondary-titles-not-working-with-some-titles/) that caused some special characters to be displayed incorrectly when using [WP Typography plugin](https://wordpress.org/plugins/wp-typography/) (thanks to [@msailer](https://wordpress.org/support/users/msailer/))
+* Added support for [wp-Typography plugin](https://wordpress.org/plugins/wp-typography/)
+* Fixed [bug](https://wordpress.org/support/topic/auto-show-secondary-titles-not-working-with-some-titles/) that caused some special characters to be displayed incorrectly when using [wp-Typography plugin](https://wordpress.org/plugins/wp-typography/) (thanks to [@msailer](https://wordpress.org/support/users/msailer/))
 * [Reintroduced the "Input field position" option[(https://wordpress.org/support/topic/above-or-below-the-standard-title/), but only if [Classic Editor]() is installed and activated (thanks to [@boborg](https://wordpress.org/support/users/boborg/))
 * Removed localized files and its related PHP functions since this is now being handled and downloaded automatically by WordPress
 
@@ -357,7 +357,7 @@ conflicts.
 == Upgrade Notice ==
 
 = 2.0.7 =
-This version reintroduces the "Input field position" option for WordPress 5.0 and above when using the [Classic Editor](https://wordpress.org/plugins/classic-editor/) plugin.
+This version reintroduces the "Input field position" option for WordPress 5.0 and above when using the [Classic Editor](https://wordpress.org/plugins/classic-editor/) plugin. It also adds support for [wp-Typography](https://wordpress.org/plugins/wp-typography/) plugin.
 
 = 2.0.6 =
 A hotfix to remove [a bug](https://wordpress.org/support/topic/latest-version-causes-posts-to-crash/) that might lead to a PHP fatal error.
