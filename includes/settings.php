@@ -344,7 +344,7 @@ function secondary_title_settings_page() {
 										</p>
 									</td>
 								</tr>
-						 <?php if ( version_compare( $wp_version, "5.0", "<" ) ) { ?>
+						 <?php if ( version_compare( $wp_version, "5.0", ">=" ) && class_exists( "Classic_Editor" ) ) { ?>
 									 <tr>
 										 <th>
 											 <label for="input-field-position-top">
@@ -361,12 +361,14 @@ function secondary_title_settings_page() {
 												 <label for="input-field-position-bottom"><?php _e( "Below standard title", "secondary-title" ); ?></label>
 											 </div>
 											 <p class="description">
-                                  <?php _e( "Determines the position of the secondary title input field on add/edit post pages within the admin area.", "secondary-title" ); ?>
-												 <strong><?php _e( "Note", "secondary-title" ); ?>:</strong>
-									  <?php
-							 _e( "This option only applies when using the Classic Editor plugin.", "secondary-title" );
-							 ?>
-										</p>
+                                  	<?php _e( "Determines the position of the secondary title input field on add/edit post pages within the admin area.", "secondary-title" ); ?>
+											 </p>
+											 <p class="description">
+												 <small>
+												 	<strong><?php _e( "Note", "secondary-title" ); ?>:</strong>
+									  				<?php _e( "This option only applies when using the <em>Classic Editor</em> plugin.", "secondary-title" ); ?>
+												</small>
+											 </p>
 										 </td>
 									 </tr>
 						 <?php } ?>

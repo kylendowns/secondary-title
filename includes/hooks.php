@@ -29,9 +29,6 @@ if ( ! function_exists( "add_action" ) ) {
 	die( "403 - You are not authorized to view this page." );
 }
 
-/** Loads translation files (function defined in secondary-title.php */
-add_action( "plugins_loaded", "secondary_title_load_translations" );
-
 /**
  * Add a secondary title meta box to Gutenberg editor
  *

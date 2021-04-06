@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Secondary Title\n"
-"POT-Creation-Date: 2021-03-31 22:07+0200\n"
+"POT-Creation-Date: 2021-04-06 18:53+0200\n"
 "PO-Revision-Date: 2017-12-15 05:19+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,41 +20,41 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/admin.php:49
+#: includes/admin.php:47
 msgid "Enter your secondary title"
 msgstr ""
 
-#: includes/admin.php:52 includes/hooks.php:45
+#: includes/admin.php:50 includes/hooks.php:45
 msgid "Enter secondary title here"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: includes/admin.php:78 includes/hooks.php:61
+#: includes/admin.php:74 includes/hooks.php:61
 msgid "Secondary Title"
 msgstr ""
 
-#: includes/functions.php:521
+#: includes/functions.php:524
 msgid "Click here to learn more about this setting"
 msgstr ""
 
-#: includes/hooks.php:145
+#: includes/hooks.php:143
 msgid "Secondary title"
 msgstr ""
 
-#: includes/hooks.php:314 includes/hooks.php:666
+#: includes/hooks.php:312 includes/hooks.php:659
 msgid "Settings"
 msgstr ""
 
-#: includes/hooks.php:561
+#: includes/hooks.php:559
 msgid "Feeling generous?"
 msgstr ""
 
-#: includes/hooks.php:567
+#: includes/hooks.php:565
 #, php-format
 msgid "<p>Ah, look at that, you are using my plugin %s. Excellent choice 😉</p>"
 msgstr ""
 
-#: includes/hooks.php:574
+#: includes/hooks.php:572
 msgid ""
 "<p>If you want to make sure that the plugin continues to be updated to "
 "guarantee compatibility with future versions your plugins or themes, you can "
@@ -62,19 +62,15 @@ msgid ""
 "whole WordPress community!</p>"
 msgstr ""
 
-#: includes/hooks.php:582
+#: includes/hooks.php:580
 msgid "Keep Secondary Title alive by Donating via PayPal"
 msgstr ""
 
-#: includes/hooks.php:586
+#: includes/hooks.php:584
 msgid "Stop displaying this annoying notice"
 msgstr ""
 
-#: includes/hooks.php:591
-msgid "Dismiss this notice."
-msgstr ""
-
-#: includes/hooks.php:663
+#: includes/hooks.php:656
 msgid "Go to Secondary Title's options page"
 msgstr ""
 
@@ -254,58 +250,62 @@ msgid ""
 "pages within the admin area."
 msgstr ""
 
-#: includes/settings.php:365 includes/settings.php:397
+#: includes/settings.php:368 includes/settings.php:399
 msgid "Note"
 msgstr ""
 
-#: includes/settings.php:367 includes/settings.php:399
-msgid "This option only applies when using the Classic Editor plugin."
+#: includes/settings.php:369
+msgid "This option only applies when using the <em>Classic Editor</em> plugin."
 msgstr ""
 
-#: includes/settings.php:377
+#: includes/settings.php:379
 msgid "Column position"
 msgstr ""
 
-#: includes/settings.php:385
+#: includes/settings.php:387
 msgid "Left of primary title"
 msgstr ""
 
-#: includes/settings.php:389
+#: includes/settings.php:391
 msgid "Right of primary title"
 msgstr ""
 
-#: includes/settings.php:393
+#: includes/settings.php:395
 #, php-format
 msgid ""
 "Specifies the position of the secondary title in regard to the primary title "
 "on <a href=\"%s\">post overview</a> pages within the admin area."
 msgstr ""
 
-#: includes/settings.php:412
-msgid "Click to save your changes"
+#: includes/settings.php:401
+msgid "This option only applies when using the Classic Editor plugin."
 msgstr ""
 
 #: includes/settings.php:414
-msgid "Save Changes"
+msgid "Click to save your changes"
 msgstr ""
 
 #: includes/settings.php:416
-msgid "Click to reset settings to their default values"
+msgid "Save Changes"
 msgstr ""
 
 #: includes/settings.php:418
-msgid "Reset Settings"
+msgid "Click to reset settings to their default values"
 msgstr ""
 
 #: includes/settings.php:420
-msgid "Click to view the full documentation of Secondary Title"
+msgid "Reset Settings"
 msgstr ""
 
 #: includes/settings.php:422
+msgid "Click to view the full documentation of Secondary Title"
+msgstr ""
+
+#: includes/settings.php:424
 msgid "View Full Documentation"
 msgstr ""
 
-#: includes/settings.php:428
+#: includes/settings.php:430
 #, php-format
 msgid ""
 "Found an error? Help making Secondary Title better by <a href=\"%s\" title="

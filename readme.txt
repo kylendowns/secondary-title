@@ -3,7 +3,7 @@ Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
 Tags: title,         alternative title, secondary title, second title, post title, title
 Tested up to:        5.7
-Stable tag:          2.0.6
+Stable tag:          2.0.7
 Requires at least:   4.0
 Requires PHP:        7.1
 License:             GPLv3 or later
@@ -67,6 +67,10 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 5. A section of Secondary Title's settings page.
 
 == Changelog ==
+
+= 2.0.7 =
+* [Reintroduced the "Input field position" option[(https://wordpress.org/support/topic/above-or-below-the-standard-title/), but only if [Classic Editor]() is installed and activated (thanks to [@boborg](https://wordpress.org/support/users/boborg/))
+* Removed localized files and its related PHP functions since this is now being handled and downloaded automatically by WordPress
 
 = 2.0.6 =
 * Fixed [bug resulting in `PHP fatal error`](https://wordpress.org/support/topic/latest-version-causes-posts-to-crash/) when using undeclared variables in function parameters (thanks to [@philsimon](https://wordpress.org/support/users/philsimon/))
@@ -349,6 +353,9 @@ conflicts.
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 2.0.7 =
+This version reintroduces the "Input field position" option for WordPress 5.0 and above when using the [Classic Editor](https://wordpress.org/plugins/classic-editor/) plugin.
 
 = 2.0.6 =
 A hotfix to remove [a bug](https://wordpress.org/support/topic/latest-version-causes-posts-to-crash/) that might lead to a PHP fatal error.
