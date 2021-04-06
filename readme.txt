@@ -69,6 +69,8 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 == Changelog ==
 
 = 2.0.7 =
+* Added support for [WP Typography plugin](https://wordpress.org/plugins/wp-typography/)
+* Fixed [bug](https://wordpress.org/support/topic/auto-show-secondary-titles-not-working-with-some-titles/) that caused some special characters to be displayed incorrectly when using [WP Typography plugin](https://wordpress.org/plugins/wp-typography/) (thanks to [@msailer](https://wordpress.org/support/users/msailer/))
 * [Reintroduced the "Input field position" option[(https://wordpress.org/support/topic/above-or-below-the-standard-title/), but only if [Classic Editor]() is installed and activated (thanks to [@boborg](https://wordpress.org/support/users/boborg/))
 * Removed localized files and its related PHP functions since this is now being handled and downloaded automatically by WordPress
 
