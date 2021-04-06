@@ -228,13 +228,7 @@ function secondary_title_auto_show( string $title ): string {
 			return $standard_title;
 		}
 
-		/** Use `wptexturize()` to transform quotes into smart quotes, apostrophes, dashes, and others  */
 		$secondary_title = wptexturize( $secondary_title );
-
-		/** Do not `wptexturize()` it if the plugin wp-Typography is in use to avoid unescaped output */
-		if ( class_exists( "WP_Typography" ) ) {
-			$secondary_title = htmlspecialchars_decode( $secondary_title );
-		}
 	}
 
 	/** Apply title format */
