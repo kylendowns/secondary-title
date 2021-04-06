@@ -217,8 +217,14 @@ function secondary_title_auto_show( string $title ): string {
 	$secondary_title = get_secondary_title( $post->ID, "", "", true );
 
 	/** Validate secondary title */
-	if ( ! $secondary_title || get_option( "secondary_title_auto_show" ) === "off" || $title !== wptexturize( $post->post_title ) || is_admin() ) {
-		return $standard_title;
+	if ( ! $secondary_title || get_option( "secondary_title_auto_show" ) === "off" || is_admin() ) {
+		$secondary_title = wptexturize( $post->post_title );
+
+		if ( class_exists( "WP_Typography" ) ) {
+			$secondary_title = htmlspecialchars_decode( $secondary_title );
+		}
+
+		return $secondary_title;
 	}
 
 	/** Apply title format */
