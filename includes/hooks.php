@@ -223,19 +223,10 @@ function secondary_title_auto_show( string $title ): string {
 	);
 
 	/** Validate secondary title */
-//	if ( ! $secondary_title || get_option( "secondary_title_auto_show" ) === "off" || is_admin() ) {
-//		if ( empty( $secondary_title ) ) {
-//			return $standard_title;
-//		}
-//
-//		$secondary_title = wptexturize( $secondary_title );
-//	}
-	
-	/** Validate secondary title */
-	if ( ! $secondary_title || get_option( "secondary_title_auto_show" ) === "off" || $title !== wptexturize( $post->post_title ) || is_admin() ) {
+	if ( ! $secondary_title || get_option( "secondary_title_auto_show" ) === "off" || $title !== wptexturize( $post->post_title ) ) {
 		return $standard_title;
 	}
-	
+
 	/** Apply title format */
 	$format = str_replace(
 		'"',
