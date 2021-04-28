@@ -68,6 +68,9 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 
 == Changelog ==
 
+= 2.0.7.1 =
+* HOTFIX: Reverted a change that caused [a bug](https://wordpress.org/support/topic/secondary-titles-showing-in-categories-sidebar/) when displaying the secondary title in sidebars
+
 = 2.0.7 =
 * Added support for [wp-Typography plugin](https://wordpress.org/plugins/wp-typography/)
 * Fixed [bug](https://wordpress.org/support/topic/auto-show-secondary-titles-not-working-with-some-titles/) that caused some special characters to be displayed incorrectly when using [wp-Typography plugin](https://wordpress.org/plugins/wp-typography/) (thanks to [@msailer](https://wordpress.org/support/users/msailer/) and [@pepe](https://wordpress.org/support/users/pputzer/))
@@ -355,6 +358,9 @@ conflicts.
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 2.0.7.1 =
+* A hotfix that reverts a change that caused [a bug](https://wordpress.org/support/topic/secondary-titles-showing-in-categories-sidebar/) when displaying the secondary title in sidebars
 
 = 2.0.7 =
 This version reintroduces the "Input field position" option for WordPress 5.0 and above when using the [Classic Editor](https://wordpress.org/plugins/classic-editor/) plugin. It also adds support for [wp-Typography](https://wordpress.org/plugins/wp-typography/) plugin.
