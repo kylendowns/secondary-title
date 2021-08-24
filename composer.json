@@ -1,0 +1,20 @@
+{
+  "name": "thaikolja/secondary-title",
+  "version": "2.0.8",
+  "description": "Adds a secondary title to posts, pages and custom post types.",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "kolja Nolte",
+      "email": "kolja.nolte@gmail.com",
+      "homepage": "https://www.kolja-nolte.com"
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.6"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  }
+}
