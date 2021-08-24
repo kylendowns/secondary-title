@@ -42,7 +42,7 @@ function secondary_title_gutenberg_meta_box_content( $post ) {
 	$title           = __( "Enter secondary title here", "secondary-title" );
 	$placeholder     = $title . "...";
 	?>
-	<input type="text" value="<?php echo $secondary_title; ?>" id="secondary-title" class="components-text-control__input" name="secondary_post_title" title="<?php echo $title; ?>" placeholder="<?php echo $placeholder; ?>"/>
+	<input type="text" value="<?php echo $secondary_title; ?>" id="secondary-title" class="components-text-control__input" name="secondary_post_title" title="<?php echo $title; ?>" placeholder="<?php echo $placeholder; ?>" />
 	<?php
 }
 
@@ -223,8 +223,8 @@ function secondary_title_auto_show( string $title ): string {
 	);
 
 	/** Validate secondary title */
-	if ( ! $secondary_title || get_option( "secondary_title_auto_show" ) === "off" /*|| $title !== wptexturize( $post->post_title )*/ ) {
-		return html_entity_decode( $standard_title );
+	if ( ! $secondary_title || get_option( "secondary_title_auto_show" ) === "off" || $title !== wptexturize( $post->post_title ) ) {
+		return $standard_title;
 	}
 
 	/** Apply title format */
@@ -559,32 +559,32 @@ function secondary_title_donation_notice(): void {
 	?>
 	<div id="donation-notice" class="notice notice-info">
 		<h1>
-			<?php _e( "Feeling generous?", "secondary-title" ); ?>
+		  <?php _e( "Feeling generous?", "secondary-title" ); ?>
 		</h1>
 		<p>
-			<?php
-			echo sprintf(
-				__(
-					"<p>" . "Ah, look at that, you are using my plugin %s. Excellent choice 😉" . "</p>",
-					"secondary-title"
-				),
-				"<strong>Secondary Title</strong> (version " . SECONDARY_TITLE_VERSION . ")"
-			);
+          <?php
+		  echo sprintf(
+			  __(
+				  "<p>" . "Ah, look at that, you are using my plugin %s. Excellent choice 😉" . "</p>",
+				  "secondary-title"
+			  ),
+			  "<strong>Secondary Title</strong> (version " . SECONDARY_TITLE_VERSION . ")"
+		  );
 
-			_e(
-				"<p>" . "If you want to make sure that the plugin continues to be updated to guarantee compatibility with future versions your plugins or themes, you can help by making a small donation. This will benefit not only yourself but the whole WordPress community!" . "</p>",
-				"secondary-title"
-			);
-			?>
+		  _e(
+			  "<p>" . "If you want to make sure that the plugin continues to be updated to guarantee compatibility with future versions your plugins or themes, you can help by making a small donation. This will benefit not only yourself but the whole WordPress community!" . "</p>",
+			  "secondary-title"
+		  );
+		  ?>
 		</p>
 		<div class="action-buttons">
 			<a href="https://www.paypal.me/thaikolja/10/" target="_blank" class="button button-primary link-button" style="margin-right:10px;">
 				<i class="fab fa-paypal" style="margin-right:5px;"></i>
-				<?php _e( "Keep Secondary Title alive by Donating via PayPal", "secondary-title" ); ?>
+			 <?php _e( "Keep Secondary Title alive by Donating via PayPal", "secondary-title" ); ?>
 			</a>
 			<a href="<?php echo $disable_notice_url; ?>" class="button button-secondary dismiss-button">
 				<i class="fa fa-times"></i>
-				<?php _e( "Stop displaying this annoying notice", "secondary-title" ); ?>
+			 <?php _e( "Stop displaying this annoying notice", "secondary-title" ); ?>
 			</a>
 		</div>
 		<br>

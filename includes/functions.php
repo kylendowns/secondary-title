@@ -465,6 +465,11 @@ function secondary_title_verify_admin_page(): bool {
 		return true;
 	}
 
+	/** Don't do anything if the post is not a valid, well, post */
+	if ( ! $post->ID ) {
+		return false;
+	}
+
 	if ( ! isset( $post->ID ) || ! get_the_title( $post->ID ) ) {
 		return true;
 	}

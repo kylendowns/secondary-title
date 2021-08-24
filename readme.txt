@@ -2,8 +2,8 @@
 Contributors:        thaikolja
 Donate link:         https://www.paypal.me/thaikolja/10
 Tags: title,         alternative title, secondary title, second title, post title, title
-Tested up to:        5.7
-Stable tag:          2.0.7.1
+Tested up to:        5.8
+Stable tag:          2.0.8
 Requires at least:   4.0
 Requires PHP:        7.1
 License:             GPLv3 or later
@@ -67,6 +67,9 @@ The full FAQ can be found in the [documentation](https://thaikolja.gitbooks.io/s
 5. A section of Secondary Title's settings page.
 
 == Changelog ==
+
+= 2.0.8 =
+* Added support for WordPress 5.8
 
 = 2.0.7.1 =
 * HOTFIX: Reverted a change that caused [a bug](https://wordpress.org/support/topic/secondary-titles-showing-in-categories-sidebar/) when displaying the secondary title in sidebars
@@ -358,6 +361,9 @@ conflicts.
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 2.0.8 =
+WordPress 5.8 support.
 
 = 2.0.7.1 =
 * A hotfix that reverts a change that caused [a bug](https://wordpress.org/support/topic/secondary-titles-showing-in-categories-sidebar/) when displaying the secondary title in sidebars
