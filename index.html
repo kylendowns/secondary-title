@@ -1,1 +1,49 @@
-<!-- Nothing to see here, just protecting your directory -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="description" content="Description">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.min.css">
+	</head>
+	<body>
+		<div id="app">🔥 Firing up JavaScript...</div>
+		<script>
+			window.$docsify = {
+				name:           'Secondary Title',
+				repo:           'https://gitlab.com/thaikolja/secondary-title',
+				loadSidebar:    true,
+				subMaxLevel:    2,
+				loadNavbar:     '_navbar.md',
+				homepage:       'start.md',
+				themeColor:     '#b64536',
+				relativePath:   false,
+				autoHeader:     true,
+				mergeNavbar:    true,
+				notFoundPage:   true,
+				basePath:       '$DOCSIFY_BASE_PATH',
+				corner:         {
+					icon: 'gitlab'
+				},
+				formatUpdated:  '<strong>Last updated:</strong> <time>{YYYY}-{MM}-{DD}</time> at <time>{HH}:{mm}</time>',
+				requestHeaders: {
+					'cache-control': 'max-age=600'
+				}
+			};
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+		<script src="https://unpkg.com/docsify-copy-code"></script>
+		<script src="https://unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/docsify-corner/dist/docsify-corner.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
+		<script src="https://unpkg.com/docsify-accordify/src/index.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@1.x/dist/plugin.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+		<script src="https://unpkg.com/@rakutentech/docsify-code-inline/dist/index.min.js"></script>
+		<script src="https://unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
+		<script src="/assets/font-awesome.min.js"></script>
+	</body>
+</html>
