@@ -7,7 +7,7 @@ pages:
     name: cirocosta/alpine-envsubst:latest
     entrypoint: [ "" ]
   variables:
-    DOCSIFY_BASE_PATH: https://GROUP_NAME.gitlab.io/-/PROJECT_PATH/docs
+    DOCSIFY_BASE_PATH: https://thaikolja.gitlab.io/-/secondary-title/docs
     docsify: $docsify
   stage: deploy
   script:
@@ -23,18 +23,3 @@ pages:
       - public
   only:
     - master
-
-"Create Preview Environment":
-  extends: pages
-  variables:
-    DOCSIFY_BASE_PATH: https://GROUP_NAME.gitlab.io/-/PROJECT_PATH/-/jobs/$CI_JOB_ID/artifacts/public/docs
-  script:
-    - mkdir .public
-    - envsubst < "index.html" > ".index.html"
-    - envsubst < ".index.html" > "index.html"
-    - rm -f .index.html
-    - cp -r * .public
-    - mv .public public
-  stage: test
-  only:
-    - merge_requests
