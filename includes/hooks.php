@@ -29,6 +29,8 @@ if ( ! function_exists( "add_action" ) ) {
 	die( "403 - You are not authorized to view this page." );
 }
 
+use voku\helper\AntiXSS;
+
 /**
  * Add a secondary title meta box to Gutenberg editor
  *
@@ -246,6 +248,9 @@ function secondary_title_auto_show( string $title ): string {
 		$title
 	);
 
+     /** Clean the $title prior to output */
+     $cleaned_title = (new AntiXSS())->xss_clean($title);
+
 	/** Only display if title is within the main loop */
 	if ( secondary_title_get_setting( "only_show_in_main_post" ) === "on" ) {
 		global $wp_query;
@@ -255,7 +260,7 @@ function secondary_title_auto_show( string $title ): string {
 		}
 	}
 
-	return (string) $title;
+	return (string) $cleaned_title;
 }
 
 add_filter( "the_title", "secondary_title_auto_show" );
