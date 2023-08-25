@@ -86,8 +86,8 @@ function secondary_title_get_default_settings(): array {
 		"secondary_title_post_ids"               => [],
 		"secondary_title_auto_show"              => "on",
 		"secondary_title_title_format"           => "%secondary_title%: %title%",
-		"secondary_title_input_field_position"   => "above",
-		"secondary_title_only_show_in_main_post" => "off",
+		"secondary_title_input_field_position"   => "above", // depricated/unused 
+		"secondary_title_only_show_in_main_post" => "off", 
 		"secondary_title_use_in_permalinks"      => "off",
 		"secondary_title_permalinks_position"    => "prepend",
 		"secondary_title_column_position"        => "right",

@@ -17,7 +17,7 @@
  * Plugin Name:   Secondary Title
  * Plugin URI:    https://www.kolja-nolte.com/wordpress/plugins/secondary-title/
  * Description:   Adds a secondary title to posts, pages and custom post types.
- * Version:       2.0.8
+ * Version:       3.0.0
  * Author:        Kolja Nolte
  * Author URI:    https://www.kolja-nolte.com
  * License:       GPLv2 or later
@@ -25,39 +25,36 @@
  * Text Domain:   secondary-title
  */
 
+// If this file is called directly, abort.
+if (! defined(constant_name: 'ABSPATH')) {
+    exit;
+}
+
 /**
- * Stop script when the file is called directly.
+ * Add our autoloader for getting classes out of the 'includes' directory
  */
-if ( ! function_exists( "add_action" ) ){
-	die( "403 - You are not authorized to view this page." );
+require_once plugin_dir_path(file: __FILE__) . 'autoload.php';
+
+/**
+ * Set up plugin and confirm default options are set.
+ */
+//register_activation_hook(__FILE__, array( 'SecondaryTitle\\Activator', 'activate' ));
+
+/**
+ * Return a single instance of the Secondary_Title class.
+ *
+ * @return SecondaryTitle\SecondaryTitle
+ */
+function secondary_title(): \SecondaryTitle\SecondaryTitle
+{
+    return SecondaryTitle\SecondaryTitle::instance(plugin_file: __FILE__);
 }
 
-define( "SECONDARY_TITLE_PATH", plugin_dir_path( __FILE__ ) );
-define( "SECONDARY_TITLE_URL", plugin_dir_url( __FILE__ ) );
-
-const SECONDARY_TITLE_VERSION = "2.0.8";
-
-/** Install default settings (if not set yet) */
-register_activation_hook( __FILE__, "secondary_title_install" );
-
-/** Handles the donation notification display settings */
-register_deactivation_hook( __FILE__, "secondary_title_reset_donation_notice" );
-
-/** Calls function which adds a link to the settings page on "Plugins" section in the admin area */
-add_action( "plugin_action_links_" . plugin_basename( __FILE__ ), "secondary_title_add_settings_link" );
-
-/** Find all .php files in the "includes" directory */
-$include_files = glob( plugin_dir_path( __FILE__ ) . "/includes/*.php" );
-
-/** Loop through all .php files in the "includes" directory */
-foreach ( $include_files as $include_file ) {
-	/** Skip file if file is not valid */
-	if ( ! is_file( $include_file ) || is_dir( $include_file ) ){
-		continue;
-	}
-
-	/** Include current file */
-	require_once $include_file;
+/**
+ * Kick off the plugin!
+ */
+function secondary_title_initialize(): void {
+    secondary_title()->initialize();
 }
 
-require_once __DIR__ . '/vendor/autoload.php';
+add_action(hook_name: 'plugins_loaded', callback: 'secondary_title_initialize');
